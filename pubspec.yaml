@@ -57,7 +57,7 @@ flutter:
 
 screenshots:
   - description: "© Fake"
-    path: logo.jpg
+    path: fake-icon.jpg
 
 topics:
   - faker
