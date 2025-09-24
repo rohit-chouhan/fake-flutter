@@ -56,7 +56,7 @@ flutter:
   # https://flutter.dev/to/font-from-package
 
 screenshots:
-  - description: "© Fake"
+  - description: "© Fake Package"
     path: fake-icon.jpg
 
 topics:
