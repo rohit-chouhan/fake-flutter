@@ -14,7 +14,7 @@ class FakeMedia {
 
   static String avatarUrl({int size = 150}) {
     final id = _random.nextInt(1000);
-    return 'https://via.placeholder.com/${size}x${size}/$id';
+    return 'https://via.placeholder.com/${size}x$size/$id';
   }
 
   static String profilePictureUrl({int size = 150}) {
@@ -27,7 +27,7 @@ class FakeMedia {
 
   static String iconUrl({int size = 64}) {
     final id = _random.nextInt(1000);
-    return 'https://via.placeholder.com/${size}x${size}/$id?text=Icon';
+    return 'https://via.placeholder.com/${size}x$size/$id?text=Icon';
   }
 
   static String emoji() {
@@ -36,17 +36,17 @@ class FakeMedia {
 
   static String backgroundUrl({int width = 1920, int height = 1080}) {
     final color = _backgroundColors[_random.nextInt(_backgroundColors.length)];
-    return 'https://via.placeholder.com/${width}x${height}/$color';
+    return 'https://via.placeholder.com/${width}x$height/$color';
   }
 
   static String logoUrl({int size = 200}) {
     final id = _random.nextInt(1000);
-    return 'https://via.placeholder.com/${size}x${size}/$id?text=Logo';
+    return 'https://via.placeholder.com/${size}x$size/$id?text=Logo';
   }
 
   static String qrCodeUrl({String? data, int size = 150}) {
     final text = data ?? 'https://example.com';
-    return 'https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=$text';
+    return 'https://api.qrserver.com/v1/create-qr-code/?size=${size}x$size&data=$text';
   }
 
   static String barcodeUrl({String? data, int width = 200, int height = 100}) {

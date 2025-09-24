@@ -63,7 +63,7 @@ class FakeAuth {
   }
 
   static String accessToken() {
-    return 'Bearer ' + _randomHex(32);
+    return 'Bearer ${_randomHex(32)}';
   }
 
   static String refreshToken() {

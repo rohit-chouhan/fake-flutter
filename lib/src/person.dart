@@ -46,7 +46,7 @@ class FakePerson {
 
   static String nickname() {
     final name = firstName();
-    return name.substring(0, min(3, name.length)) + 'y';
+    return '${name.substring(0, min(3, name.length))}y';
   }
 
   static int age({int min = 18, int max = 80}) {

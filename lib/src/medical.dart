@@ -82,7 +82,7 @@ class FakeMedical {
     final med = medication();
     final dosage = '${_random.nextInt(500) + 50}mg';
     final frequency = ['once daily', 'twice daily', 'three times daily', 'as needed'][_random.nextInt(4)];
-    return '$med ${dosage} $frequency';
+    return '$med $dosage $frequency';
   }
 
   static String medicalRecordNumber() {

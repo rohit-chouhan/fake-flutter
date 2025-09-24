@@ -66,15 +66,15 @@ class FakeAnimals {
   }
 
   static String mountain() {
-    return 'Mount ' + ['Everest', 'Kilimanjaro', 'Fuji', 'McKinley', 'Aconcagua'][_random.nextInt(5)];
+    return 'Mount ${['Everest', 'Kilimanjaro', 'Fuji', 'McKinley', 'Aconcagua'][_random.nextInt(5)]}';
   }
 
   static String river() {
-    return ['Amazon', 'Nile', 'Yangtze', 'Mississippi', 'Danube'][_random.nextInt(5)] + ' River';
+    return '${['Amazon', 'Nile', 'Yangtze', 'Mississippi', 'Danube'][_random.nextInt(5)]} River';
   }
 
   static String lake() {
-    return ['Superior', 'Victoria', 'Huron', 'Michigan', 'Tanganyika'][_random.nextInt(5)] + ' Lake';
+    return '${['Superior', 'Victoria', 'Huron', 'Michigan', 'Tanganyika'][_random.nextInt(5)]} Lake';
   }
 
   static String weatherCondition() {

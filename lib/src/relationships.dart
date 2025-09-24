@@ -172,7 +172,7 @@ class FakeRelationships {
       'posts': List.generate(userCount * 2, (index) {
         final user = users[index % users.length];
         return {
-          'id': 'post_${index}',
+          'id': 'post_$index',
           'author': user['id'],
           'content': FakeInternet.socialMediaPost(),
           'timestamp': FakeDateTime.pastDate(),

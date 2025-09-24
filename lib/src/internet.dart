@@ -36,7 +36,7 @@ class FakeInternet {
   static String url() {
     final domain = _domains[_random.nextInt(_domains.length)];
     final path = '/path${_random.nextInt(100)}';
-    return 'https://www.${domain}${path}';
+    return 'https://www.$domain$path';
   }
 
   static String domain() {
@@ -86,7 +86,7 @@ class FakeInternet {
   static String socialMediaProfileUrl({String? platform}) {
     final plat = platform ?? _socialPlatforms[_random.nextInt(_socialPlatforms.length)];
     final username = 'user${_random.nextInt(10000)}';
-    return 'https://www.${plat}.com/${username}';
+    return 'https://www.$plat.com/$username';
   }
 
   static String socialMediaPost() {

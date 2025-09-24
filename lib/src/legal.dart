@@ -107,11 +107,11 @@ class FakeLegal {
 
   static String liabilityLimitation() {
     final amount = (_random.nextDouble() * 100000).round();
-    return 'Liability shall not exceed \$${amount} under any circumstances.';
+    return 'Liability shall not exceed \$$amount under any circumstances.';
   }
 
   static String terminationClause() {
     final days = _random.nextInt(90) + 30;
-    return 'Either party may terminate this agreement with ${days} days written notice.';
+    return 'Either party may terminate this agreement with $days days written notice.';
   }
 }

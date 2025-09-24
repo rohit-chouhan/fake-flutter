@@ -44,7 +44,7 @@ class FakeCompany {
     final fn = firstName ?? 'john';
     final ln = lastName ?? 'doe';
     final company = companyName().toLowerCase().replaceAll(' ', '');
-    return '${fn.toLowerCase()}.${ln.toLowerCase()}@${company}.com';
+    return '${fn.toLowerCase()}.${ln.toLowerCase()}@$company.com';
   }
 
   static String industry() {

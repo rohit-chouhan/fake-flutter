@@ -15,25 +15,25 @@ class FakeContact {
     final fn = firstName ?? 'john';
     final ln = lastName ?? 'doe';
     final domain = _domains[_random.nextInt(_domains.length)];
-    return '${fn.toLowerCase()}.${ln.toLowerCase()}@${domain}';
+    return '${fn.toLowerCase()}.${ln.toLowerCase()}@$domain';
   }
 
   static String phoneNumber() {
     final areaCode = 200 + _random.nextInt(800);
     final exchange = 200 + _random.nextInt(800);
     final number = 1000 + _random.nextInt(9000);
-    return '+1-${areaCode}-${exchange}-${number}';
+    return '+1-$areaCode-$exchange-$number';
   }
 
   static String websiteUrl() {
     final domains = ['example.com', 'testsite.org', 'fakeweb.net'];
     final domain = domains[_random.nextInt(domains.length)];
-    return 'https://www.${domain}';
+    return 'https://www.$domain';
   }
 
   static String socialMediaHandle({String? platform}) {
     final username = 'user${_random.nextInt(10000)}';
-    return '@${username}';
+    return '@$username';
   }
 
   static String messagingAppId({String? app}) {
@@ -72,5 +72,24 @@ class FakeContact {
 
   static String phoneExtension() {
     return _random.nextInt(10000).toString().padLeft(4, '0');
+  }
+
+  static Map<String, dynamic> contactCard() {
+    return {
+      'name': 'Contact ${_random.nextInt(1000)}',
+      'email': email(),
+      'phone': phoneNumber(),
+      'mobile': mobileNumber(),
+      'website': websiteUrl(),
+      'socialMedia': socialMediaHandle(),
+      'messagingId': messagingAppId(),
+      'notes': contactNotes(),
+      'countryCode': countryCode(),
+      'areaCode': areaCode(),
+      'fax': faxNumber(),
+      'landline': landlineNumber(),
+      'internationalPhone': internationalPhoneNumber(),
+      'extension': phoneExtension(),
+    };
   }
 }

@@ -1,5 +1,5 @@
 /// A Flutter package for generating fake data for testing, prototyping, and seeding databases.
-library fake;
+library;
 
 export 'src/person.dart';
 export 'src/contact.dart';
