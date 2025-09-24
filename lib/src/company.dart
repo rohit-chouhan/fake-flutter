@@ -1,6 +1,5 @@
 import 'dart:math';
 import 'address.dart';
-import 'contact.dart';
 
 class FakeCompany {
   static final Random _random = Random();

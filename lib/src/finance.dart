@@ -7,8 +7,6 @@ class FakeFinance {
     'Bank of America', 'Chase', 'Wells Fargo', 'Citibank', 'HSBC'
   ];
 
-  static const List<String> _currencies = ['USD', 'EUR', 'GBP', 'JPY', 'CAD'];
-
   static String bankName() {
     return _banks[_random.nextInt(_banks.length)];
   }

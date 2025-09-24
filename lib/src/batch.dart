@@ -3,7 +3,6 @@ import 'person.dart';
 import 'address.dart';
 import 'company.dart';
 import 'contact.dart';
-import 'finance.dart';
 
 class FakeBatch {
   static final Random _random = Random();

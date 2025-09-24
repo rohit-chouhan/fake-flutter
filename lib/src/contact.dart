@@ -7,14 +7,6 @@ class FakeContact {
     'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'example.com'
   ];
 
-  static const List<String> _socialPlatforms = [
-    'twitter', 'facebook', 'instagram', 'linkedin', 'github'
-  ];
-
-  static const List<String> _messagingApps = [
-    'whatsapp', 'telegram', 'signal', 'discord'
-  ];
-
   static const List<String> _notes = [
     'Work colleague', 'Family friend', 'Business partner', 'Old acquaintance', 'New contact'
   ];
@@ -40,13 +32,11 @@ class FakeContact {
   }
 
   static String socialMediaHandle({String? platform}) {
-    final plat = platform ?? _socialPlatforms[_random.nextInt(_socialPlatforms.length)];
     final username = 'user${_random.nextInt(10000)}';
     return '@${username}';
   }
 
   static String messagingAppId({String? app}) {
-    final application = app ?? _messagingApps[_random.nextInt(_messagingApps.length)];
     final id = '+1${_random.nextInt(900000000) + 100000000}';
     return id;
   }

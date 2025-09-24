@@ -15,11 +15,6 @@ class FakeAuth {
     'What is the name of your elementary school?'
   ];
 
-  static const List<String> _passwordWords = [
-    'password', 'secret', 'admin', 'user', 'login', 'pass', 'key', 'code',
-    'secure', 'safe', 'access', 'account', 'system', 'data', 'info', 'web'
-  ];
-
   static const List<String> _specialChars = ['!', '@', '#', r'$', '%', '^', '&', '*'];
 
   static String password({int length = 8}) {
