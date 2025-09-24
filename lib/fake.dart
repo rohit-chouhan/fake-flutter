@@ -1,0 +1,32 @@
+/// A Flutter package for generating fake data for testing, prototyping, and seeding databases.
+
+export 'src/person.dart';
+export 'src/contact.dart';
+export 'src/address.dart';
+export 'src/company.dart';
+export 'src/finance.dart';
+export 'src/text.dart';
+export 'src/internet.dart';
+export 'src/datetime.dart';
+export 'src/media.dart';
+export 'src/misc.dart';
+export 'src/animals.dart';
+export 'src/auth.dart';
+export 'src/vehicle.dart';
+export 'src/food.dart';
+export 'src/medical.dart';
+export 'src/education.dart';
+export 'src/technology.dart';
+export 'src/travel.dart';
+export 'src/science.dart';
+export 'src/sports.dart';
+export 'src/business.dart';
+export 'src/real_estate.dart';
+export 'src/legal.dart';
+export 'src/government.dart';
+export 'src/weather.dart';
+export 'src/events.dart';
+export 'src/batch.dart';
+export 'src/cache.dart';
+export 'src/serialization.dart';
+export 'src/relationships.dart';
