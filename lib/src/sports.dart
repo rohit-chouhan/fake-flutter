@@ -4,37 +4,87 @@ class FakeSports {
   static final Random _random = Random();
 
   static const List<String> _sports = [
-    'Football', 'Basketball', 'Baseball', 'Soccer', 'Tennis', 'Golf', 'Hockey',
-    'Volleyball', 'Swimming', 'Track and Field', 'Boxing', 'MMA', 'Cricket'
+    'Football',
+    'Basketball',
+    'Baseball',
+    'Soccer',
+    'Tennis',
+    'Golf',
+    'Hockey',
+    'Volleyball',
+    'Swimming',
+    'Track and Field',
+    'Boxing',
+    'MMA',
+    'Cricket',
   ];
 
   static const List<String> _footballTeams = [
-    'New England Patriots', 'Kansas City Chiefs', 'Green Bay Packers', 'Chicago Bears',
-    'New York Giants', 'Philadelphia Eagles', 'Dallas Cowboys', 'Washington Commanders'
+    'New England Patriots',
+    'Kansas City Chiefs',
+    'Green Bay Packers',
+    'Chicago Bears',
+    'New York Giants',
+    'Philadelphia Eagles',
+    'Dallas Cowboys',
+    'Washington Commanders',
   ];
 
   static const List<String> _basketballTeams = [
-    'Los Angeles Lakers', 'Golden State Warriors', 'Boston Celtics', 'Miami Heat',
-    'Chicago Bulls', 'New York Knicks', 'Los Angeles Clippers', 'Brooklyn Nets'
+    'Los Angeles Lakers',
+    'Golden State Warriors',
+    'Boston Celtics',
+    'Miami Heat',
+    'Chicago Bulls',
+    'New York Knicks',
+    'Los Angeles Clippers',
+    'Brooklyn Nets',
   ];
 
   static const List<String> _soccerTeams = [
-    'Manchester United', 'Real Madrid', 'Barcelona', 'Liverpool', 'Chelsea',
-    'Bayern Munich', 'Juventus', 'Paris Saint-Germain'
+    'Manchester United',
+    'Real Madrid',
+    'Barcelona',
+    'Liverpool',
+    'Chelsea',
+    'Bayern Munich',
+    'Juventus',
+    'Paris Saint-Germain',
   ];
 
   static const List<String> _baseballTeams = [
-    'New York Yankees', 'Boston Red Sox', 'Los Angeles Dodgers', 'New York Mets',
-    'Chicago Cubs', 'Atlanta Braves', 'Houston Astros', 'Texas Rangers'
+    'New York Yankees',
+    'Boston Red Sox',
+    'Los Angeles Dodgers',
+    'New York Mets',
+    'Chicago Cubs',
+    'Atlanta Braves',
+    'Houston Astros',
+    'Texas Rangers',
   ];
 
   static const List<String> _positions = [
-    'Quarterback', 'Running Back', 'Wide Receiver', 'Tight End', 'Offensive Line',
-    'Linebacker', 'Defensive Back', 'Kicker', 'Punter', 'Coach'
+    'Quarterback',
+    'Running Back',
+    'Wide Receiver',
+    'Tight End',
+    'Offensive Line',
+    'Linebacker',
+    'Defensive Back',
+    'Kicker',
+    'Punter',
+    'Coach',
   ];
 
   static const List<String> _venues = [
-    'Stadium', 'Arena', 'Field', 'Court', 'Track', 'Pool', 'Gym', 'Coliseum'
+    'Stadium',
+    'Arena',
+    'Field',
+    'Court',
+    'Track',
+    'Pool',
+    'Gym',
+    'Coliseum',
   ];
 
   static String sport() {
@@ -62,8 +112,26 @@ class FakeSports {
   }
 
   static String playerName() {
-    final firstNames = ['John', 'Mike', 'David', 'Chris', 'James', 'Robert', 'Michael', 'William'];
-    final lastNames = ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis'];
+    final firstNames = [
+      'John',
+      'Mike',
+      'David',
+      'Chris',
+      'James',
+      'Robert',
+      'Michael',
+      'William',
+    ];
+    final lastNames = [
+      'Smith',
+      'Johnson',
+      'Williams',
+      'Brown',
+      'Jones',
+      'Garcia',
+      'Miller',
+      'Davis',
+    ];
     return '${firstNames[_random.nextInt(firstNames.length)]} ${lastNames[_random.nextInt(lastNames.length)]}';
   }
 
@@ -82,11 +150,19 @@ class FakeSports {
   }
 
   static String gameResult() {
-    return ['Win', 'Loss', 'Tie', 'Overtime Win', 'Overtime Loss'][_random.nextInt(5)];
+    return ['Win', 'Loss', 'Tie', 'Overtime Win', 'Overtime Loss'][_random
+        .nextInt(5)];
   }
 
   static String venue() {
-    final names = ['Memorial', 'Community', 'City', 'State', 'National', 'Arena'];
+    final names = [
+      'Memorial',
+      'Community',
+      'City',
+      'State',
+      'National',
+      'Arena',
+    ];
     final name = names[_random.nextInt(names.length)];
     final type = _venues[_random.nextInt(_venues.length)];
     return '$name $type';
@@ -97,7 +173,14 @@ class FakeSports {
   }
 
   static String tournament() {
-    final tournaments = ['Championship', 'Playoffs', 'Super Bowl', 'World Cup', 'Olympics', 'Stanley Cup'];
+    final tournaments = [
+      'Championship',
+      'Playoffs',
+      'Super Bowl',
+      'World Cup',
+      'Olympics',
+      'Stanley Cup',
+    ];
     return tournaments[_random.nextInt(tournaments.length)];
   }
 
@@ -115,12 +198,27 @@ class FakeSports {
   }
 
   static String injury() {
-    final injuries = ['Sprained Ankle', 'Broken Leg', 'Concussion', 'Torn ACL', 'Strained Back', 'Dislocated Shoulder'];
+    final injuries = [
+      'Sprained Ankle',
+      'Broken Leg',
+      'Concussion',
+      'Torn ACL',
+      'Strained Back',
+      'Dislocated Shoulder',
+    ];
     return injuries[_random.nextInt(injuries.length)];
   }
 
   static String statistic() {
-    final stats = ['Points', 'Assists', 'Rebounds', 'Goals', 'Saves', 'Hits', 'Home Runs'];
+    final stats = [
+      'Points',
+      'Assists',
+      'Rebounds',
+      'Goals',
+      'Saves',
+      'Hits',
+      'Home Runs',
+    ];
     return stats[_random.nextInt(stats.length)];
   }
 
@@ -130,7 +228,14 @@ class FakeSports {
 
   static String refereeName() {
     final firstNames = ['Mike', 'John', 'Steve', 'Bob', 'Tom', 'Bill'];
-    final lastNames = ['Johnson', 'Smith', 'Williams', 'Brown', 'Davis', 'Miller'];
+    final lastNames = [
+      'Johnson',
+      'Smith',
+      'Williams',
+      'Brown',
+      'Davis',
+      'Miller',
+    ];
     return '${firstNames[_random.nextInt(firstNames.length)]} ${lastNames[_random.nextInt(lastNames.length)]}';
   }
 
@@ -139,12 +244,26 @@ class FakeSports {
   }
 
   static String teamMascot() {
-    final mascots = ['Eagle', 'Lion', 'Tiger', 'Bear', 'Wolf', 'Shark', 'Falcon', 'Panther'];
+    final mascots = [
+      'Eagle',
+      'Lion',
+      'Tiger',
+      'Bear',
+      'Wolf',
+      'Shark',
+      'Falcon',
+      'Panther',
+    ];
     return mascots[_random.nextInt(mascots.length)];
   }
 
   static String championshipTitle() {
-    final titles = ['World Champion', 'National Champion', 'Division Champion', 'Conference Champion'];
+    final titles = [
+      'World Champion',
+      'National Champion',
+      'Division Champion',
+      'Conference Champion',
+    ];
     return titles[_random.nextInt(titles.length)];
   }
 }

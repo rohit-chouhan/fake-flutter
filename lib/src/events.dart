@@ -4,19 +4,45 @@ class FakeEvents {
   static final Random _random = Random();
 
   static const List<String> _eventTypes = [
-    'Conference', 'Workshop', 'Seminar', 'Webinar', 'Festival', 'Concert',
-    'Exhibition', 'Trade Show', 'Networking Event', 'Charity Event', 'Birthday Party',
-    'Wedding', 'Graduation', 'Anniversary', 'Holiday Celebration'
+    'Conference',
+    'Workshop',
+    'Seminar',
+    'Webinar',
+    'Festival',
+    'Concert',
+    'Exhibition',
+    'Trade Show',
+    'Networking Event',
+    'Charity Event',
+    'Birthday Party',
+    'Wedding',
+    'Graduation',
+    'Anniversary',
+    'Holiday Celebration',
   ];
 
   static const List<String> _venues = [
-    'Convention Center', 'Hotel Ballroom', 'Conference Hall', 'Auditorium',
-    'Stadium', 'Arena', 'Park', 'Museum', 'Art Gallery', 'Restaurant', 'Church'
+    'Convention Center',
+    'Hotel Ballroom',
+    'Conference Hall',
+    'Auditorium',
+    'Stadium',
+    'Arena',
+    'Park',
+    'Museum',
+    'Art Gallery',
+    'Restaurant',
+    'Church',
   ];
 
   static const List<String> _organizers = [
-    'Tech Corp', 'Event Planners Inc', 'Community Center', 'University',
-    'Non-Profit Organization', 'Government Agency', 'Private Company'
+    'Tech Corp',
+    'Event Planners Inc',
+    'Community Center',
+    'University',
+    'Non-Profit Organization',
+    'Government Agency',
+    'Private Company',
   ];
 
   static String eventType() {
@@ -32,7 +58,13 @@ class FakeEvents {
   }
 
   static String eventName() {
-    final adjectives = ['Annual', 'International', 'National', 'Regional', 'Local'];
+    final adjectives = [
+      'Annual',
+      'International',
+      'National',
+      'Regional',
+      'Local',
+    ];
     final nouns = ['Conference', 'Summit', 'Festival', 'Expo', 'Gathering'];
     return '${adjectives[_random.nextInt(adjectives.length)]} ${nouns[_random.nextInt(nouns.length)]}';
   }
@@ -57,7 +89,7 @@ class FakeEvents {
       'Join us for an unforgettable experience with great food and entertainment.',
       'A professional development opportunity for career advancement.',
       'Celebrate with friends and family in this special occasion.',
-      'Learn from experts in this educational and informative gathering.'
+      'Learn from experts in this educational and informative gathering.',
     ];
     return descriptions[_random.nextInt(descriptions.length)];
   }
@@ -66,13 +98,21 @@ class FakeEvents {
     final count = 1 + _random.nextInt(5);
     final speakers = <String>[];
     for (var i = 0; i < count; i++) {
-      speakers.add('${['Dr.', 'Prof.', 'Mr.', 'Ms.'][_random.nextInt(4)]} Speaker ${i + 1}');
+      speakers.add(
+        '${['Dr.', 'Prof.', 'Mr.', 'Ms.'][_random.nextInt(4)]} Speaker ${i + 1}',
+      );
     }
     return speakers;
   }
 
   static String eventStatus() {
-    return ['Planning', 'Registration Open', 'Sold Out', 'In Progress', 'Completed'][_random.nextInt(5)];
+    return [
+      'Planning',
+      'Registration Open',
+      'Sold Out',
+      'In Progress',
+      'Completed',
+    ][_random.nextInt(5)];
   }
 
   static Map<String, dynamic> eventDetails() {
@@ -97,13 +137,16 @@ class FakeEvents {
     for (var i = 0; i < sessions; i++) {
       final duration = 30 + _random.nextInt(120); // 30-150 minutes
       schedule.add({
-        'title': 'Session ${i + 1}: ${['Keynote', 'Workshop', 'Panel', 'Breakout'][_random.nextInt(4)]}',
+        'title':
+            'Session ${i + 1}: ${['Keynote', 'Workshop', 'Panel', 'Breakout'][_random.nextInt(4)]}',
         'startTime': startTime,
         'endTime': startTime.add(Duration(minutes: duration)),
         'speaker': speakers()[0],
         'description': 'An engaging session on important topics.',
       });
-      startTime = startTime.add(Duration(minutes: duration + 15)); // 15 min break
+      startTime = startTime.add(
+        Duration(minutes: duration + 15),
+      ); // 15 min break
     }
     return schedule;
   }

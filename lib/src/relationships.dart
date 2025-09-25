@@ -49,7 +49,10 @@ class FakeRelationships {
         'bloodType': FakeMedical.bloodType(),
         'insurance': FakeMedical.insuranceProvider(),
         'lastCheckup': FakeDateTime.pastDate(),
-        'allergies': List.generate(_random.nextInt(3), (_) => FakeMedical.disease()),
+        'allergies': List.generate(
+          _random.nextInt(3),
+          (_) => FakeMedical.disease(),
+        ),
       },
       'preferences': {
         'favoriteColor': FakeMisc.colorHex(),
@@ -63,14 +66,19 @@ class FakeRelationships {
   }
 
   /// Generate a company with employees and relationships
-  static Map<String, dynamic> companyWithRelationships({int employeeCount = 5}) {
+  static Map<String, dynamic> companyWithRelationships({
+    int employeeCount = 5,
+  }) {
     final companyId = 'company_${_random.nextInt(1000000)}';
 
     if (_entityCache.containsKey(companyId)) {
       return _entityCache[companyId];
     }
 
-    final employees = List.generate(employeeCount, (_) => personWithRelationships());
+    final employees = List.generate(
+      employeeCount,
+      (_) => personWithRelationships(),
+    );
 
     final company = {
       'id': companyId,
@@ -91,11 +99,14 @@ class FakeRelationships {
         'website': FakeContact.websiteUrl(),
       },
       'employees': employees,
-      'departments': List.generate(4, (_) => {
-        'name': FakeCompany.department(),
-        'manager': employees[_random.nextInt(employees.length)]['name'],
-        'employeeCount': _random.nextInt(20) + 5,
-      }),
+      'departments': List.generate(
+        4,
+        (_) => {
+          'name': FakeCompany.department(),
+          'manager': employees[_random.nextInt(employees.length)]['name'],
+          'employeeCount': _random.nextInt(20) + 5,
+        },
+      ),
     };
 
     _entityCache[companyId] = company;
@@ -158,7 +169,11 @@ class FakeRelationships {
         connections.add({
           'user1': users[i]['id'],
           'user2': users[friendIndex]['id'],
-          'connectionType': ['Friend', 'Colleague', 'Family'][_random.nextInt(3)],
+          'connectionType': [
+            'Friend',
+            'Colleague',
+            'Family',
+          ][_random.nextInt(3)],
           'since': FakeDateTime.pastDate(),
         });
       }
@@ -193,28 +208,43 @@ class FakeRelationships {
   }) {
     final ecosystemId = 'ecommerce_${_random.nextInt(1000000)}';
 
-    final customers = List.generate(customerCount, (_) => personWithRelationships());
-    final products = List.generate(productCount, (_) => {
-      'id': 'product_${_random.nextInt(1000000)}',
-      'name': FakeBusiness.productName(),
-      'price': FakeBusiness.price(),
-      'category': FakeBusiness.productCategory(),
-      'sku': FakeBusiness.sku(),
-      'description': FakeText.loremSentences(2),
-    });
+    final customers = List.generate(
+      customerCount,
+      (_) => personWithRelationships(),
+    );
+    final products = List.generate(
+      productCount,
+      (_) => {
+        'id': 'product_${_random.nextInt(1000000)}',
+        'name': FakeBusiness.productName(),
+        'price': FakeBusiness.price(),
+        'category': FakeBusiness.productCategory(),
+        'sku': FakeBusiness.sku(),
+        'description': FakeText.loremSentences(2),
+      },
+    );
 
     final orders = List.generate(orderCount, (_) {
       final customer = customers[_random.nextInt(customers.length)];
-      final orderProducts = List.generate(_random.nextInt(5) + 1, (_) =>
-        products[_random.nextInt(products.length)]
+      final orderProducts = List.generate(
+        _random.nextInt(5) + 1,
+        (_) => products[_random.nextInt(products.length)],
       );
 
       return {
         'id': 'order_${_random.nextInt(1000000)}',
         'customer': customer['id'],
         'products': orderProducts,
-        'total': orderProducts.fold(0.0, (sum, product) => sum + (product['price'] as double)),
-        'status': ['Pending', 'Processing', 'Shipped', 'Delivered'][_random.nextInt(4)],
+        'total': orderProducts.fold(
+          0.0,
+          (sum, product) => sum + (product['price'] as double),
+        ),
+        'status': [
+          'Pending',
+          'Processing',
+          'Shipped',
+          'Delivered',
+        ][_random.nextInt(4)],
         'orderDate': FakeDateTime.pastDate(),
         'shippingAddress': customer['address'],
       };
@@ -227,10 +257,15 @@ class FakeRelationships {
       'products': products,
       'orders': orders,
       'analytics': {
-        'totalRevenue': orders.fold(0.0, (sum, order) => sum + (order['total'] as double)),
+        'totalRevenue': orders.fold(
+          0.0,
+          (sum, order) => sum + (order['total'] as double),
+        ),
         'totalOrders': orders.length,
         'totalCustomers': customers.length,
-        'averageOrderValue': orders.fold(0.0, (sum, order) => sum + (order['total'] as double)) / orders.length,
+        'averageOrderValue':
+            orders.fold(0.0, (sum, order) => sum + (order['total'] as double)) /
+            orders.length,
       },
     };
 
@@ -249,7 +284,10 @@ class FakeRelationships {
       'cachedEntities': _entityCache.length,
       'totalRelationships': _entityCache.values
           .where((entity) => entity is Map && entity.containsKey('employees'))
-          .fold(0, (sum, company) => sum + (company['employees'] as List).length),
+          .fold(
+            0,
+            (sum, company) => sum + (company['employees'] as List).length,
+          ),
     };
   }
 }

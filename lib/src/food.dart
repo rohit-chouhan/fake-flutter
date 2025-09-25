@@ -4,40 +4,134 @@ class FakeFood {
   static final Random _random = Random();
 
   static const List<String> _foods = [
-    'Pizza', 'Burger', 'Pasta', 'Salad', 'Sushi', 'Tacos', 'Sandwich', 'Soup',
-    'Steak', 'Chicken Curry', 'Fish and Chips', 'Fried Rice', 'Lasagna', 'Omelette',
-    'Grilled Cheese', 'Hot Dog', 'Burrito', 'Pad Thai', 'Ramen', 'Pho'
+    'Pizza',
+    'Burger',
+    'Pasta',
+    'Salad',
+    'Sushi',
+    'Tacos',
+    'Sandwich',
+    'Soup',
+    'Steak',
+    'Chicken Curry',
+    'Fish and Chips',
+    'Fried Rice',
+    'Lasagna',
+    'Omelette',
+    'Grilled Cheese',
+    'Hot Dog',
+    'Burrito',
+    'Pad Thai',
+    'Ramen',
+    'Pho',
   ];
 
   static const List<String> _drinks = [
-    'Coffee', 'Tea', 'Soda', 'Water', 'Juice', 'Beer', 'Wine', 'Cocktail',
-    'Smoothie', 'Milkshake', 'Lemonade', 'Iced Tea', 'Hot Chocolate', 'Cappuccino'
+    'Coffee',
+    'Tea',
+    'Soda',
+    'Water',
+    'Juice',
+    'Beer',
+    'Wine',
+    'Cocktail',
+    'Smoothie',
+    'Milkshake',
+    'Lemonade',
+    'Iced Tea',
+    'Hot Chocolate',
+    'Cappuccino',
   ];
 
   static const List<String> _ingredients = [
-    'Tomato', 'Onion', 'Garlic', 'Cheese', 'Chicken', 'Beef', 'Rice', 'Pasta',
-    'Lettuce', 'Carrot', 'Potato', 'Bread', 'Egg', 'Milk', 'Flour', 'Sugar',
-    'Salt', 'Pepper', 'Olive Oil', 'Butter', 'Basil', 'Oregano', 'Thyme', 'Rosemary'
+    'Tomato',
+    'Onion',
+    'Garlic',
+    'Cheese',
+    'Chicken',
+    'Beef',
+    'Rice',
+    'Pasta',
+    'Lettuce',
+    'Carrot',
+    'Potato',
+    'Bread',
+    'Egg',
+    'Milk',
+    'Flour',
+    'Sugar',
+    'Salt',
+    'Pepper',
+    'Olive Oil',
+    'Butter',
+    'Basil',
+    'Oregano',
+    'Thyme',
+    'Rosemary',
   ];
 
   static const List<String> _cuisines = [
-    'Italian', 'Mexican', 'Chinese', 'Japanese', 'Indian', 'French', 'Thai',
-    'Greek', 'Spanish', 'American', 'Korean', 'Vietnamese', 'Turkish', 'Lebanese'
+    'Italian',
+    'Mexican',
+    'Chinese',
+    'Japanese',
+    'Indian',
+    'French',
+    'Thai',
+    'Greek',
+    'Spanish',
+    'American',
+    'Korean',
+    'Vietnamese',
+    'Turkish',
+    'Lebanese',
   ];
 
   static const List<String> _desserts = [
-    'Chocolate Cake', 'Ice Cream', 'Cookies', 'Pie', 'Brownie', 'Cheesecake',
-    'Tiramisu', 'Pudding', 'Muffin', 'Donut', 'Cupcake', 'Macaron'
+    'Chocolate Cake',
+    'Ice Cream',
+    'Cookies',
+    'Pie',
+    'Brownie',
+    'Cheesecake',
+    'Tiramisu',
+    'Pudding',
+    'Muffin',
+    'Donut',
+    'Cupcake',
+    'Macaron',
   ];
 
   static const List<String> _fruits = [
-    'Apple', 'Banana', 'Orange', 'Grape', 'Strawberry', 'Blueberry', 'Pineapple',
-    'Mango', 'Kiwi', 'Watermelon', 'Peach', 'Pear', 'Lemon', 'Lime'
+    'Apple',
+    'Banana',
+    'Orange',
+    'Grape',
+    'Strawberry',
+    'Blueberry',
+    'Pineapple',
+    'Mango',
+    'Kiwi',
+    'Watermelon',
+    'Peach',
+    'Pear',
+    'Lemon',
+    'Lime',
   ];
 
   static const List<String> _vegetables = [
-    'Carrot', 'Broccoli', 'Spinach', 'Tomato', 'Cucumber', 'Bell Pepper',
-    'Zucchini', 'Eggplant', 'Cauliflower', 'Potato', 'Onion', 'Garlic'
+    'Carrot',
+    'Broccoli',
+    'Spinach',
+    'Tomato',
+    'Cucumber',
+    'Bell Pepper',
+    'Zucchini',
+    'Eggplant',
+    'Cauliflower',
+    'Potato',
+    'Onion',
+    'Garlic',
   ];
 
   static String food() {
@@ -91,17 +185,40 @@ class FakeFood {
   }
 
   static String spice() {
-    final spices = ['Cumin', 'Coriander', 'Turmeric', 'Ginger', 'Cinnamon', 'Paprika', 'Chili Powder'];
+    final spices = [
+      'Cumin',
+      'Coriander',
+      'Turmeric',
+      'Ginger',
+      'Cinnamon',
+      'Paprika',
+      'Chili Powder',
+    ];
     return spices[_random.nextInt(spices.length)];
   }
 
   static String cookingMethod() {
-    final methods = ['Grilled', 'Fried', 'Baked', 'Steamed', 'Boiled', 'Roasted', 'Sautéed'];
+    final methods = [
+      'Grilled',
+      'Fried',
+      'Baked',
+      'Steamed',
+      'Boiled',
+      'Roasted',
+      'Sautéed',
+    ];
     return methods[_random.nextInt(methods.length)];
   }
 
   static String dietaryRestriction() {
-    final restrictions = ['Vegetarian', 'Vegan', 'Gluten-Free', 'Dairy-Free', 'Nut-Free', 'Kosher'];
+    final restrictions = [
+      'Vegetarian',
+      'Vegan',
+      'Gluten-Free',
+      'Dairy-Free',
+      'Nut-Free',
+      'Kosher',
+    ];
     return restrictions[_random.nextInt(restrictions.length)];
   }
 
@@ -110,7 +227,14 @@ class FakeFood {
   }
 
   static String restaurantName() {
-    final adjectives = ['Golden', 'Spicy', 'Fresh', 'Tasty', 'Delicious', 'Authentic'];
+    final adjectives = [
+      'Golden',
+      'Spicy',
+      'Fresh',
+      'Tasty',
+      'Delicious',
+      'Authentic',
+    ];
     final types = ['Kitchen', 'Restaurant', 'Cafe', 'Bistro', 'Diner', 'Grill'];
     return '${adjectives[_random.nextInt(adjectives.length)]} ${cuisine()} ${types[_random.nextInt(types.length)]}';
   }

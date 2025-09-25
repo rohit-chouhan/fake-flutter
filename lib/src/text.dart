@@ -8,37 +8,54 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 ''';
 
   static const List<String> _bookNames = [
-    'To Kill a Mockingbird', '1984', 'Pride and Prejudice', 'The Great Gatsby', 'Moby Dick'
+    'To Kill a Mockingbird',
+    '1984',
+    'Pride and Prejudice',
+    'The Great Gatsby',
+    'Moby Dick',
   ];
 
   static const List<String> _movieNames = [
-    'The Shawshank Redemption', 'The Godfather', 'Pulp Fiction', 'Inception', 'The Matrix'
+    'The Shawshank Redemption',
+    'The Godfather',
+    'Pulp Fiction',
+    'Inception',
+    'The Matrix',
   ];
 
   static const List<String> _songNames = [
-    'Bohemian Rhapsody', 'Stairway to Heaven', 'Hotel California', 'Imagine', 'Hey Jude'
+    'Bohemian Rhapsody',
+    'Stairway to Heaven',
+    'Hotel California',
+    'Imagine',
+    'Hey Jude',
   ];
 
   static const List<String> _quotes = [
-    'The only way to do great work is to love what you do.', 'Be yourself; everyone else is already taken.',
-    'The future belongs to those who believe in the beauty of their dreams.'
+    'The only way to do great work is to love what you do.',
+    'Be yourself; everyone else is already taken.',
+    'The future belongs to those who believe in the beauty of their dreams.',
   ];
 
   static const List<String> _jokes = [
     'Why don\'t scientists trust atoms? Because they make up everything!',
-    'Why did the scarecrow win an award? Because he was outstanding in his field!'
+    'Why did the scarecrow win an award? Because he was outstanding in his field!',
   ];
 
   static const List<String> _facts = [
-    'A group of flamingos is called a flamboyance.', 'Octopuses have three hearts.',
-    'Bananas are berries, but strawberries aren\'t.'
+    'A group of flamingos is called a flamboyance.',
+    'Octopuses have three hearts.',
+    'Bananas are berries, but strawberries aren\'t.',
   ];
 
   static List<String> _loremWords = [];
 
   static List<String> get _words {
     if (_loremWords.isEmpty) {
-      _loremWords = _loremIpsum.split(RegExp(r'\s+')).where((w) => w.isNotEmpty).toList();
+      _loremWords = _loremIpsum
+          .split(RegExp(r'\s+'))
+          .where((w) => w.isNotEmpty)
+          .toList();
     }
     return _loremWords;
   }
@@ -116,62 +133,130 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 
   static String tvShow() {
     const shows = [
-      'Breaking Bad', 'Game of Thrones', 'The Sopranos', 'The Wire', 'Friends',
-      'The Office', 'Stranger Things', 'The Mandalorian', 'Black Mirror', 'Westworld'
+      'Breaking Bad',
+      'Game of Thrones',
+      'The Sopranos',
+      'The Wire',
+      'Friends',
+      'The Office',
+      'Stranger Things',
+      'The Mandalorian',
+      'Black Mirror',
+      'Westworld',
     ];
     return shows[_random.nextInt(shows.length)];
   }
 
   static String musicTrack() {
     const tracks = [
-      'Bohemian Rhapsody', 'Stairway to Heaven', 'Hotel California', 'Imagine', 'Hey Jude',
-      'Smells Like Teen Spirit', 'Billie Jean', 'Thriller', 'Wonderwall', 'Yesterday'
+      'Bohemian Rhapsody',
+      'Stairway to Heaven',
+      'Hotel California',
+      'Imagine',
+      'Hey Jude',
+      'Smells Like Teen Spirit',
+      'Billie Jean',
+      'Thriller',
+      'Wonderwall',
+      'Yesterday',
     ];
     return tracks[_random.nextInt(tracks.length)];
   }
 
   static String musicAlbum() {
     const albums = [
-      'Abbey Road', 'Dark Side of the Moon', 'Thriller', 'Back in Black', 'The Wall',
-      'Nevermind', 'Rumours', 'Led Zeppelin IV', 'Sgt. Pepper\'s', 'Highway 61 Revisited'
+      'Abbey Road',
+      'Dark Side of the Moon',
+      'Thriller',
+      'Back in Black',
+      'The Wall',
+      'Nevermind',
+      'Rumours',
+      'Led Zeppelin IV',
+      'Sgt. Pepper\'s',
+      'Highway 61 Revisited',
     ];
     return albums[_random.nextInt(albums.length)];
   }
 
   static String musicArtist() {
     const artists = [
-      'The Beatles', 'Queen', 'Michael Jackson', 'Pink Floyd', 'Led Zeppelin',
-      'Nirvana', 'Fleetwood Mac', 'Bob Dylan', 'David Bowie', 'Radiohead'
+      'The Beatles',
+      'Queen',
+      'Michael Jackson',
+      'Pink Floyd',
+      'Led Zeppelin',
+      'Nirvana',
+      'Fleetwood Mac',
+      'Bob Dylan',
+      'David Bowie',
+      'Radiohead',
     ];
     return artists[_random.nextInt(artists.length)];
   }
 
   static String videoGame() {
     const games = [
-      'The Legend of Zelda', 'Super Mario Bros', 'The Witcher 3', 'Red Dead Redemption 2',
-      'The Last of Us', 'God of War', 'Minecraft', 'Fortnite', 'Call of Duty', 'FIFA'
+      'The Legend of Zelda',
+      'Super Mario Bros',
+      'The Witcher 3',
+      'Red Dead Redemption 2',
+      'The Last of Us',
+      'God of War',
+      'Minecraft',
+      'Fortnite',
+      'Call of Duty',
+      'FIFA',
     ];
     return games[_random.nextInt(games.length)];
   }
 
   static String sport() {
     const sports = [
-      'Football', 'Basketball', 'Baseball', 'Soccer', 'Tennis', 'Golf', 'Hockey', 'Volleyball'
+      'Football',
+      'Basketball',
+      'Baseball',
+      'Soccer',
+      'Tennis',
+      'Golf',
+      'Hockey',
+      'Volleyball',
     ];
     return sports[_random.nextInt(sports.length)];
   }
 
   static String sportsLeague() {
     const leagues = [
-      'NFL', 'NBA', 'MLB', 'Premier League', 'La Liga', 'Serie A', 'Bundesliga', 'NHL'
+      'NFL',
+      'NBA',
+      'MLB',
+      'Premier League',
+      'La Liga',
+      'Serie A',
+      'Bundesliga',
+      'NHL',
     ];
     return leagues[_random.nextInt(leagues.length)];
   }
 
   static String genre() {
     const genres = [
-      'Rock', 'Pop', 'Jazz', 'Classical', 'Hip Hop', 'Country', 'Electronic', 'Blues',
-      'Action', 'Comedy', 'Drama', 'Horror', 'Sci-Fi', 'Romance', 'Thriller', 'Documentary'
+      'Rock',
+      'Pop',
+      'Jazz',
+      'Classical',
+      'Hip Hop',
+      'Country',
+      'Electronic',
+      'Blues',
+      'Action',
+      'Comedy',
+      'Drama',
+      'Horror',
+      'Sci-Fi',
+      'Romance',
+      'Thriller',
+      'Documentary',
     ];
     return genres[_random.nextInt(genres.length)];
   }

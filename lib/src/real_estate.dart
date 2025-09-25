@@ -4,27 +4,64 @@ class FakeRealEstate {
   static final Random _random = Random();
 
   static const List<String> _propertyTypes = [
-    'Single Family Home', 'Condo', 'Townhouse', 'Apartment', 'Duplex', 'Triplex',
-    'Mobile Home', 'Vacation Home', 'Commercial Property', 'Office Building'
+    'Single Family Home',
+    'Condo',
+    'Townhouse',
+    'Apartment',
+    'Duplex',
+    'Triplex',
+    'Mobile Home',
+    'Vacation Home',
+    'Commercial Property',
+    'Office Building',
   ];
 
   static const List<String> _neighborhoods = [
-    'Downtown', 'Suburb', 'Uptown', 'Midtown', 'Old Town', 'New District',
-    'Riverside', 'Mountain View', 'Lakefront', 'Garden District'
+    'Downtown',
+    'Suburb',
+    'Uptown',
+    'Midtown',
+    'Old Town',
+    'New District',
+    'Riverside',
+    'Mountain View',
+    'Lakefront',
+    'Garden District',
   ];
 
   static const List<String> _amenities = [
-    'Pool', 'Gym', 'Parking', 'Garden', 'Balcony', 'Fireplace', 'Walk-in Closet',
-    'Laundry Room', 'Dishwasher', 'Air Conditioning', 'Heating', 'Security System'
+    'Pool',
+    'Gym',
+    'Parking',
+    'Garden',
+    'Balcony',
+    'Fireplace',
+    'Walk-in Closet',
+    'Laundry Room',
+    'Dishwasher',
+    'Air Conditioning',
+    'Heating',
+    'Security System',
   ];
 
   static const List<String> _mortgageTypes = [
-    'Fixed Rate', 'Adjustable Rate', 'FHA Loan', 'VA Loan', 'Conventional Loan',
-    'Jumbo Loan', 'Interest Only', 'Balloon Payment'
+    'Fixed Rate',
+    'Adjustable Rate',
+    'FHA Loan',
+    'VA Loan',
+    'Conventional Loan',
+    'Jumbo Loan',
+    'Interest Only',
+    'Balloon Payment',
   ];
 
   static const List<String> _propertyConditions = [
-    'Excellent', 'Very Good', 'Good', 'Fair', 'Poor', 'Needs Repair'
+    'Excellent',
+    'Very Good',
+    'Good',
+    'Fair',
+    'Poor',
+    'Needs Repair',
   ];
 
   static String propertyType() {
@@ -95,8 +132,22 @@ class FakeRealEstate {
   }
 
   static String realtorName() {
-    final firstNames = ['Sarah', 'Michael', 'Jennifer', 'David', 'Lisa', 'Robert'];
-    final lastNames = ['Johnson', 'Smith', 'Williams', 'Brown', 'Davis', 'Miller'];
+    final firstNames = [
+      'Sarah',
+      'Michael',
+      'Jennifer',
+      'David',
+      'Lisa',
+      'Robert',
+    ];
+    final lastNames = [
+      'Johnson',
+      'Smith',
+      'Williams',
+      'Brown',
+      'Davis',
+      'Miller',
+    ];
     return '${firstNames[_random.nextInt(firstNames.length)]} ${lastNames[_random.nextInt(lastNames.length)]}';
   }
 

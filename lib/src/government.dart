@@ -4,29 +4,65 @@ class FakeGovernment {
   static final Random _random = Random();
 
   static const List<String> _departments = [
-    'Department of State', 'Department of Defense', 'Department of Justice',
-    'Department of Treasury', 'Department of Health and Human Services',
-    'Department of Education', 'Department of Transportation', 'Department of Energy',
-    'Department of Homeland Security', 'Department of Veterans Affairs'
+    'Department of State',
+    'Department of Defense',
+    'Department of Justice',
+    'Department of Treasury',
+    'Department of Health and Human Services',
+    'Department of Education',
+    'Department of Transportation',
+    'Department of Energy',
+    'Department of Homeland Security',
+    'Department of Veterans Affairs',
   ];
 
   static const List<String> _agencies = [
-    'FBI', 'CIA', 'NSA', 'IRS', 'FDA', 'EPA', 'FCC', 'FTC', 'SEC', 'NASA'
+    'FBI',
+    'CIA',
+    'NSA',
+    'IRS',
+    'FDA',
+    'EPA',
+    'FCC',
+    'FTC',
+    'SEC',
+    'NASA',
   ];
 
   static const List<String> _idTypes = [
-    'Driver License', 'Passport', 'Social Security', 'State ID', 'Military ID',
-    'Employee ID', 'Student ID', 'Medical ID', 'Voter ID'
+    'Driver License',
+    'Passport',
+    'Social Security',
+    'State ID',
+    'Military ID',
+    'Employee ID',
+    'Student ID',
+    'Medical ID',
+    'Voter ID',
   ];
 
   static const List<String> _licenseTypes = [
-    'Driver License', 'Professional License', 'Business License', 'Marriage License',
-    'Concealed Carry', 'Pilot License', 'Real Estate License', 'Medical License'
+    'Driver License',
+    'Professional License',
+    'Business License',
+    'Marriage License',
+    'Concealed Carry',
+    'Pilot License',
+    'Real Estate License',
+    'Medical License',
   ];
 
   static const List<String> _officials = [
-    'President', 'Vice President', 'Senator', 'Congressman', 'Governor',
-    'Mayor', 'Judge', 'Attorney General', 'Secretary of State', 'Chief of Police'
+    'President',
+    'Vice President',
+    'Senator',
+    'Congressman',
+    'Governor',
+    'Mayor',
+    'Judge',
+    'Attorney General',
+    'Secretary of State',
+    'Chief of Police',
   ];
 
   static String department() {
@@ -112,10 +148,21 @@ class FakeGovernment {
   }
 
   static Map<String, dynamic> weatherAlert() {
-    final alerts = ['Heat Advisory', 'Winter Storm Warning', 'Flood Warning', 'Tornado Watch', 'Hurricane Warning'];
+    final alerts = [
+      'Heat Advisory',
+      'Winter Storm Warning',
+      'Flood Warning',
+      'Tornado Watch',
+      'Hurricane Warning',
+    ];
     return {
       'type': alerts[_random.nextInt(alerts.length)],
-      'severity': ['Minor', 'Moderate', 'Severe', 'Extreme'][_random.nextInt(4)],
+      'severity': [
+        'Minor',
+        'Moderate',
+        'Severe',
+        'Extreme',
+      ][_random.nextInt(4)],
       'description': 'Weather alert for the area',
       'startTime': DateTime.now(),
       'endTime': DateTime.now().add(Duration(hours: _random.nextInt(24))),

@@ -4,50 +4,76 @@ import 'address.dart';
 import 'company.dart';
 import 'contact.dart';
 
+/// A utility class for generating batches of fake data.
+///
+/// This class provides static methods to generate multiple fake entities at once,
+/// such as lists of people, companies, products, and complete datasets for testing and prototyping.
 class FakeBatch {
   static final Random _random = Random();
 
   /// Generate multiple fake people at once
   static List<Map<String, dynamic>> people(int count) {
-    return List.generate(count, (_) => {
-      'name': FakePerson.fullName(),
-      'age': FakePerson.age(),
-      'email': FakeContact.email(),
-      'phone': FakeContact.phoneNumber(),
-      'address': FakeAddress.fullAddress(),
-    });
+    return List.generate(
+      count,
+      (_) => {
+        'name': FakePerson.fullName(),
+        'age': FakePerson.age(),
+        'email': FakeContact.email(),
+        'phone': FakeContact.phoneNumber(),
+        'address': FakeAddress.fullAddress(),
+      },
+    );
   }
 
   /// Generate multiple fake companies at once
   static List<Map<String, dynamic>> companies(int count) {
-    return List.generate(count, (_) => {
-      'name': FakeCompany.companyName(),
-      'industry': FakeCompany.industry(),
-      'email': FakeCompany.businessEmail(),
-      'phone': FakeContact.phoneNumber(),
-      'address': FakeAddress.fullAddress(),
-    });
+    return List.generate(
+      count,
+      (_) => {
+        'name': FakeCompany.companyName(),
+        'industry': FakeCompany.industry(),
+        'email': FakeCompany.businessEmail(),
+        'phone': FakeContact.phoneNumber(),
+        'address': FakeAddress.fullAddress(),
+      },
+    );
   }
 
   /// Generate multiple fake products at once
   static List<Map<String, dynamic>> products(int count) {
-    return List.generate(count, (_) => {
-      'name': 'Product ${_random.nextInt(1000)}',
-      'price': (_random.nextDouble() * 1000).roundToDouble(),
-      'category': ['Electronics', 'Clothing', 'Books', 'Home'][_random.nextInt(4)],
-      'sku': 'SKU${_random.nextInt(1000000).toString().padLeft(6, '0')}',
-    });
+    return List.generate(
+      count,
+      (_) => {
+        'name': 'Product ${_random.nextInt(1000)}',
+        'price': (_random.nextDouble() * 1000).roundToDouble(),
+        'category': [
+          'Electronics',
+          'Clothing',
+          'Books',
+          'Home',
+        ][_random.nextInt(4)],
+        'sku': 'SKU${_random.nextInt(1000000).toString().padLeft(6, '0')}',
+      },
+    );
   }
 
   /// Generate multiple fake orders at once
   static List<Map<String, dynamic>> orders(int count) {
-    return List.generate(count, (_) => {
-      'orderId': 'ORD-${_random.nextInt(1000000).toString().padLeft(6, '0')}',
-      'customerName': FakePerson.fullName(),
-      'total': (_random.nextDouble() * 5000).roundToDouble(),
-      'status': ['Pending', 'Processing', 'Shipped', 'Delivered'][_random.nextInt(4)],
-      'date': DateTime.now().subtract(Duration(days: _random.nextInt(365))),
-    });
+    return List.generate(
+      count,
+      (_) => {
+        'orderId': 'ORD-${_random.nextInt(1000000).toString().padLeft(6, '0')}',
+        'customerName': FakePerson.fullName(),
+        'total': (_random.nextDouble() * 5000).roundToDouble(),
+        'status': [
+          'Pending',
+          'Processing',
+          'Shipped',
+          'Delivered',
+        ][_random.nextInt(4)],
+        'date': DateTime.now().subtract(Duration(days: _random.nextInt(365))),
+      },
+    );
   }
 
   /// Generate a complete fake dataset
@@ -75,13 +101,19 @@ class FakeBatch {
     return {
       'status': statusCode,
       'success': success,
-      'data': success ? {'message': 'Success', 'timestamp': DateTime.now()} : {'error': 'Something went wrong'},
+      'data': success
+          ? {'message': 'Success', 'timestamp': DateTime.now()}
+          : {'error': 'Something went wrong'},
       'endpoint': endpoint,
     };
   }
 
   /// Generate fake database records
-  static List<Map<String, dynamic>> databaseRecords(String tableName, int count, List<String> columns) {
+  static List<Map<String, dynamic>> databaseRecords(
+    String tableName,
+    int count,
+    List<String> columns,
+  ) {
     return List.generate(count, (_) {
       final record = <String, dynamic>{};
       for (final column in columns) {
@@ -108,7 +140,9 @@ class FakeBatch {
             break;
           case 'date':
           case 'created_at':
-            record[column] = DateTime.now().subtract(Duration(days: _random.nextInt(365)));
+            record[column] = DateTime.now().subtract(
+              Duration(days: _random.nextInt(365)),
+            );
             break;
           case 'active':
           case 'enabled':

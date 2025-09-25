@@ -1,10 +1,18 @@
 import 'dart:math';
 
+/// A utility class for generating fake financial data.
+///
+/// This class provides static methods to generate various financial information
+/// such as bank details, credit card numbers, and transaction IDs for testing and prototyping.
 class FakeFinance {
   static final Random _random = Random();
 
   static const List<String> _banks = [
-    'Bank of America', 'Chase', 'Wells Fargo', 'Citibank', 'HSBC'
+    'Bank of America',
+    'Chase',
+    'Wells Fargo',
+    'Citibank',
+    'HSBC',
   ];
 
   static String bankName() {
@@ -26,11 +34,17 @@ class FakeFinance {
 
   static String creditCardNumber() {
     // Simple fake card number, not Luhn valid
-    final prefix = ['4', '5', '3'][_random.nextInt(3)]; // Visa, Mastercard, Amex
+    final prefix = [
+      '4',
+      '5',
+      '3',
+    ][_random.nextInt(3)]; // Visa, Mastercard, Amex
     final length = prefix == '3' ? 15 : 16;
     final remaining = length - 1;
     final part1 = _random.nextInt(100000000).toString().padLeft(8, '0');
-    final part2 = remaining > 8 ? _random.nextInt(100000000).toString().padLeft(remaining - 8, '0') : '';
+    final part2 = remaining > 8
+        ? _random.nextInt(100000000).toString().padLeft(remaining - 8, '0')
+        : '';
     final number = prefix + part1 + part2;
     return number.substring(0, length);
   }
@@ -41,7 +55,9 @@ class FakeFinance {
 
   static String expiryDate() {
     final month = (_random.nextInt(12) + 1).toString().padLeft(2, '0');
-    final year = (DateTime.now().year + _random.nextInt(5) + 1).toString().substring(2);
+    final year = (DateTime.now().year + _random.nextInt(5) + 1)
+        .toString()
+        .substring(2);
     return '$month/$year';
   }
 
@@ -76,7 +92,8 @@ class FakeFinance {
   }
 
   static String password({int length = 8}) {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#\$%^&*';
+    const chars =
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#\$%^&*';
     final buffer = StringBuffer();
     for (var i = 0; i < length; i++) {
       buffer.write(chars[_random.nextInt(chars.length)]);

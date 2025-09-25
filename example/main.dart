@@ -7,7 +7,9 @@ void main() {
   print('Person:');
   print('  Full Name: ${FakePerson.fullName()}');
   print('  Age: ${FakePerson.age()}');
-  print('  Email: ${FakePerson.firstName()}.${FakePerson.lastName()}@example.com');
+  print(
+    '  Email: ${FakePerson.firstName()}.${FakePerson.lastName()}@example.com',
+  );
   print('');
 
   // Contact
@@ -35,7 +37,9 @@ void main() {
   print('Finance:');
   print('  Credit Card: ${FakeFinance.creditCardNumber()}');
   print('  IBAN: ${FakeFinance.iban()}');
-  print('  Amount: \$${FakeFinance.currencyAmount(max: 1000).toStringAsFixed(2)}');
+  print(
+    '  Amount: \$${FakeFinance.currencyAmount(max: 1000).toStringAsFixed(2)}',
+  );
   print('');
 
   // Text
@@ -155,21 +159,35 @@ void main() {
 
   // Advanced Features
   print('Advanced Features:');
-  print('  Real Estate: ${FakeRealEstate.propertyType()} - \$${FakeRealEstate.price().round()}');
-  print('  Legal: ${FakeLegal.contractType()} - Case ${FakeLegal.caseNumber()}');
-  print('  Government: ${FakeGovernment.department()} - SSN ${FakeGovernment.ssn()}');
-  print('  Weather: ${FakeWeather.condition()} ${FakeWeather.temperature().round()}°C');
-  print('  Event: ${FakeEvents.eventName()} with ${FakeEvents.attendeeCount()} attendees');
+  print(
+    '  Real Estate: ${FakeRealEstate.propertyType()} - \$${FakeRealEstate.price().round()}',
+  );
+  print(
+    '  Legal: ${FakeLegal.contractType()} - Case ${FakeLegal.caseNumber()}',
+  );
+  print(
+    '  Government: ${FakeGovernment.department()} - SSN ${FakeGovernment.ssn()}',
+  );
+  print(
+    '  Weather: ${FakeWeather.condition()} ${FakeWeather.temperature().round()}°C',
+  );
+  print(
+    '  Event: ${FakeEvents.eventName()} with ${FakeEvents.attendeeCount()} attendees',
+  );
   print('');
 
   // Data Relationships
   print('Data Relationships:');
   final person = FakeRelationships.personWithRelationships();
-  print('  Person: ${person['name']} works at ${person['employment']['company']}');
+  print(
+    '  Person: ${person['name']} works at ${person['employment']['company']}',
+  );
   print('  Medical: Blood type ${person['medical']['bloodType']}');
 
   final company = FakeRelationships.companyWithRelationships(employeeCount: 2);
-  print('  Company: ${company['name']} has ${company['employeeCount']} employees');
+  print(
+    '  Company: ${company['name']} has ${company['employeeCount']} employees',
+  );
   print('');
 
   // Serialization

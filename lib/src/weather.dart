@@ -4,13 +4,37 @@ class FakeWeather {
   static final Random _random = Random();
 
   static const List<String> _conditions = [
-    'Sunny', 'Partly Cloudy', 'Cloudy', 'Overcast', 'Rain', 'Light Rain',
-    'Heavy Rain', 'Thunderstorm', 'Snow', 'Light Snow', 'Heavy Snow',
-    'Fog', 'Mist', 'Haze', 'Clear', 'Windy', 'Breezy'
+    'Sunny',
+    'Partly Cloudy',
+    'Cloudy',
+    'Overcast',
+    'Rain',
+    'Light Rain',
+    'Heavy Rain',
+    'Thunderstorm',
+    'Snow',
+    'Light Snow',
+    'Heavy Snow',
+    'Fog',
+    'Mist',
+    'Haze',
+    'Clear',
+    'Windy',
+    'Breezy',
   ];
 
   static const List<double> _temperatures = [
-    -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40
+    -10,
+    -5,
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
   ];
 
   static String condition() {
@@ -18,8 +42,11 @@ class FakeWeather {
   }
 
   static double temperature({bool celsius = true}) {
-    final temp = _temperatures[_random.nextInt(_temperatures.length)] + _random.nextDouble() * 10 - 5;
-    return celsius ? temp : (temp * 9/5) + 32;
+    final temp =
+        _temperatures[_random.nextInt(_temperatures.length)] +
+        _random.nextDouble() * 10 -
+        5;
+    return celsius ? temp : (temp * 9 / 5) + 32;
   }
 
   static int humidity() {
@@ -52,7 +79,13 @@ class FakeWeather {
   }
 
   static String airQuality() {
-    const qualities = ['Good', 'Moderate', 'Unhealthy', 'Very Unhealthy', 'Hazardous'];
+    const qualities = [
+      'Good',
+      'Moderate',
+      'Unhealthy',
+      'Very Unhealthy',
+      'Hazardous',
+    ];
     return qualities[_random.nextInt(qualities.length)];
   }
 
@@ -99,10 +132,21 @@ class FakeWeather {
   }
 
   static Map<String, dynamic> weatherAlert() {
-    const alerts = ['Heat Advisory', 'Winter Storm Warning', 'Flood Warning', 'Tornado Watch', 'Hurricane Warning'];
+    const alerts = [
+      'Heat Advisory',
+      'Winter Storm Warning',
+      'Flood Warning',
+      'Tornado Watch',
+      'Hurricane Warning',
+    ];
     return {
       'type': alerts[_random.nextInt(alerts.length)],
-      'severity': ['Minor', 'Moderate', 'Severe', 'Extreme'][_random.nextInt(4)],
+      'severity': [
+        'Minor',
+        'Moderate',
+        'Severe',
+        'Extreme',
+      ][_random.nextInt(4)],
       'description': 'Weather alert for the area',
       'startTime': DateTime.now(),
       'endTime': DateTime.now().add(Duration(hours: _random.nextInt(24))),

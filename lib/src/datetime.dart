@@ -4,16 +4,37 @@ class FakeDateTime {
   static final Random _random = Random();
 
   static const List<String> _daysOfWeek = [
-    'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
   ];
 
   static const List<String> _months = [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
   ];
 
   static const List<String> _holidays = [
-    'Christmas', 'New Year\'s Day', 'Thanksgiving', 'Halloween', 'Easter', 'Valentine\'s Day'
+    'Christmas',
+    'New Year\'s Day',
+    'Thanksgiving',
+    'Halloween',
+    'Easter',
+    'Valentine\'s Day',
   ];
 
   static DateTime randomDate({int? startYear, int? endYear}) {
@@ -63,7 +84,8 @@ class FakeDateTime {
   static int ageFromBirthday(DateTime birthday) {
     final now = DateTime.now();
     int age = now.year - birthday.year;
-    if (now.month < birthday.month || (now.month == birthday.month && now.day < birthday.day)) {
+    if (now.month < birthday.month ||
+        (now.month == birthday.month && now.day < birthday.day)) {
       age--;
     }
     return age;

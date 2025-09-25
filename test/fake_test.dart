@@ -154,7 +154,15 @@ void main() {
 
     test('dayOfWeek returns valid day', () {
       final day = FakeDateTime.dayOfWeek();
-      expect(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], contains(day));
+      expect([
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+        'Sunday',
+      ], contains(day));
     });
   });
 
@@ -432,7 +440,9 @@ void main() {
     });
 
     test('toCsv returns valid CSV', () {
-      final data = [{'name': 'John', 'age': 30}];
+      final data = [
+        {'name': 'John', 'age': 30},
+      ];
       final csv = FakeSerialization.toCsv(data);
       expect(csv, contains('name,age'));
       expect(csv, contains('John,30'));
@@ -448,7 +458,9 @@ void main() {
     });
 
     test('companyWithRelationships includes employees', () {
-      final company = FakeRelationships.companyWithRelationships(employeeCount: 3);
+      final company = FakeRelationships.companyWithRelationships(
+        employeeCount: 3,
+      );
       expect(company['employees'], hasLength(3));
       expect(company['departments'], hasLength(4));
     });

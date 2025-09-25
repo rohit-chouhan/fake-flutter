@@ -1,14 +1,26 @@
 import 'dart:math';
 
+/// A utility class for generating fake contact information.
+///
+/// This class provides static methods to generate various contact details
+/// such as email addresses, phone numbers, and social media handles for testing and prototyping.
 class FakeContact {
   static final Random _random = Random();
 
   static const List<String> _domains = [
-    'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'example.com'
+    'gmail.com',
+    'yahoo.com',
+    'hotmail.com',
+    'outlook.com',
+    'example.com',
   ];
 
   static const List<String> _notes = [
-    'Work colleague', 'Family friend', 'Business partner', 'Old acquaintance', 'New contact'
+    'Work colleague',
+    'Family friend',
+    'Business partner',
+    'Old acquaintance',
+    'New contact',
   ];
 
   static String email({String? firstName, String? lastName}) {

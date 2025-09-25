@@ -4,25 +4,73 @@ class FakeVehicle {
   static final Random _random = Random();
 
   static const List<String> _brands = [
-    'Toyota', 'Honda', 'Ford', 'Chevrolet', 'BMW', 'Mercedes-Benz', 'Audi', 'Volkswagen',
-    'Nissan', 'Hyundai', 'Kia', 'Subaru', 'Mazda', 'Lexus', 'Tesla', 'Volvo'
+    'Toyota',
+    'Honda',
+    'Ford',
+    'Chevrolet',
+    'BMW',
+    'Mercedes-Benz',
+    'Audi',
+    'Volkswagen',
+    'Nissan',
+    'Hyundai',
+    'Kia',
+    'Subaru',
+    'Mazda',
+    'Lexus',
+    'Tesla',
+    'Volvo',
   ];
 
   static const List<String> _models = [
-    'Camry', 'Civic', 'Mustang', 'Corvette', '3 Series', 'C-Class', 'A4', 'Golf',
-    'Altima', 'Elantra', 'Sportage', 'Outback', 'CX-5', 'RX', 'Model 3', 'XC90'
+    'Camry',
+    'Civic',
+    'Mustang',
+    'Corvette',
+    '3 Series',
+    'C-Class',
+    'A4',
+    'Golf',
+    'Altima',
+    'Elantra',
+    'Sportage',
+    'Outback',
+    'CX-5',
+    'RX',
+    'Model 3',
+    'XC90',
   ];
 
   static const List<String> _colors = [
-    'White', 'Black', 'Silver', 'Gray', 'Blue', 'Red', 'Green', 'Brown', 'Yellow', 'Orange'
+    'White',
+    'Black',
+    'Silver',
+    'Gray',
+    'Blue',
+    'Red',
+    'Green',
+    'Brown',
+    'Yellow',
+    'Orange',
   ];
 
   static const List<String> _fuelTypes = [
-    'Gasoline', 'Diesel', 'Electric', 'Hybrid', 'Hydrogen'
+    'Gasoline',
+    'Diesel',
+    'Electric',
+    'Hybrid',
+    'Hydrogen',
   ];
 
   static const List<String> _vehicleTypes = [
-    'Sedan', 'SUV', 'Truck', 'Hatchback', 'Coupe', 'Convertible', 'Wagon', 'Van'
+    'Sedan',
+    'SUV',
+    'Truck',
+    'Hatchback',
+    'Coupe',
+    'Convertible',
+    'Wagon',
+    'Van',
   ];
 
   static String brand() {

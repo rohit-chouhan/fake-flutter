@@ -4,59 +4,142 @@ class FakeMisc {
   static final Random _random = Random();
 
   static const List<String> _adjectives = [
-    'big', 'small', 'fast', 'slow', 'happy', 'sad', 'bright', 'dark'
+    'big',
+    'small',
+    'fast',
+    'slow',
+    'happy',
+    'sad',
+    'bright',
+    'dark',
   ];
 
   static const List<String> _nouns = [
-    'house', 'car', 'tree', 'book', 'phone', 'computer', 'dog', 'cat'
+    'house',
+    'car',
+    'tree',
+    'book',
+    'phone',
+    'computer',
+    'dog',
+    'cat',
   ];
 
   static const List<String> _verbs = [
-    'run', 'jump', 'eat', 'sleep', 'read', 'write', 'play', 'work'
+    'run',
+    'jump',
+    'eat',
+    'sleep',
+    'read',
+    'write',
+    'play',
+    'work',
   ];
 
   static const List<String> _vehicles = [
-    'Toyota Camry', 'Honda Civic', 'Ford Mustang', 'BMW 3 Series', 'Tesla Model 3'
+    'Toyota Camry',
+    'Honda Civic',
+    'Ford Mustang',
+    'BMW 3 Series',
+    'Tesla Model 3',
   ];
 
   static const List<String> _foods = [
-    'Pizza', 'Burger', 'Pasta', 'Salad', 'Sushi', 'Tacos', 'Ice Cream'
+    'Pizza',
+    'Burger',
+    'Pasta',
+    'Salad',
+    'Sushi',
+    'Tacos',
+    'Ice Cream',
   ];
 
   static const List<String> _drinks = [
-    'Coffee', 'Tea', 'Soda', 'Water', 'Juice', 'Beer', 'Wine'
+    'Coffee',
+    'Tea',
+    'Soda',
+    'Water',
+    'Juice',
+    'Beer',
+    'Wine',
   ];
 
   static const List<String> _sportsTeams = [
-    'Los Angeles Lakers', 'New York Yankees', 'Manchester United', 'Real Madrid'
+    'Los Angeles Lakers',
+    'New York Yankees',
+    'Manchester United',
+    'Real Madrid',
   ];
 
   static const List<String> _games = [
-    'Chess', 'Monopoly', 'Poker', 'Basketball', 'Soccer'
+    'Chess',
+    'Monopoly',
+    'Poker',
+    'Basketball',
+    'Soccer',
   ];
 
   static const List<String> _weather = [
-    'Sunny', 'Cloudy', 'Rainy', 'Snowy', 'Windy', 'Stormy'
+    'Sunny',
+    'Cloudy',
+    'Rainy',
+    'Snowy',
+    'Windy',
+    'Stormy',
   ];
 
   static const List<String> _syllables = [
-    'ar', 'el', 'in', 'or', 'an', 'th', 'er', 'on', 'at', 'en'
+    'ar',
+    'el',
+    'in',
+    'or',
+    'an',
+    'th',
+    'er',
+    'on',
+    'at',
+    'en',
   ];
 
   static const List<String> _planets = [
-    'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'
+    'Mercury',
+    'Venus',
+    'Earth',
+    'Mars',
+    'Jupiter',
+    'Saturn',
+    'Uranus',
+    'Neptune',
   ];
 
   static const List<String> _stars = [
-    'Sirius', 'Vega', 'Betelgeuse', 'Rigel', 'Aldebaran'
+    'Sirius',
+    'Vega',
+    'Betelgeuse',
+    'Rigel',
+    'Aldebaran',
   ];
 
   static const List<String> _chemicalElements = [
-    'Hydrogen', 'Helium', 'Lithium', 'Beryllium', 'Boron', 'Carbon', 'Nitrogen', 'Oxygen'
+    'Hydrogen',
+    'Helium',
+    'Lithium',
+    'Beryllium',
+    'Boron',
+    'Carbon',
+    'Nitrogen',
+    'Oxygen',
   ];
 
   static const List<String> _bloodTypes = [
-    'A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'
+    'A+',
+    'A-',
+    'B+',
+    'B-',
+    'AB+',
+    'AB-',
+    'O+',
+    'O-',
   ];
 
   static String colorHex() {
@@ -86,7 +169,7 @@ class FakeMisc {
       _randomHex(4),
       _randomHex(4),
       _randomHex(4),
-      _randomHex(12)
+      _randomHex(12),
     ];
     return parts.join('-');
   }

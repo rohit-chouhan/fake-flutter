@@ -4,37 +4,109 @@ class FakeEducation {
   static final Random _random = Random();
 
   static const List<String> _schoolTypes = [
-    'Elementary School', 'Middle School', 'High School', 'University', 'College',
-    'Technical Institute', 'Community College', 'Academy', 'Institute'
+    'Elementary School',
+    'Middle School',
+    'High School',
+    'University',
+    'College',
+    'Technical Institute',
+    'Community College',
+    'Academy',
+    'Institute',
   ];
 
   static const List<String> _subjects = [
-    'Mathematics', 'English', 'Science', 'History', 'Geography', 'Physics', 'Chemistry',
-    'Biology', 'Computer Science', 'Art', 'Music', 'Physical Education', 'Economics',
-    'Psychology', 'Sociology', 'Literature', 'Foreign Language', 'Philosophy'
+    'Mathematics',
+    'English',
+    'Science',
+    'History',
+    'Geography',
+    'Physics',
+    'Chemistry',
+    'Biology',
+    'Computer Science',
+    'Art',
+    'Music',
+    'Physical Education',
+    'Economics',
+    'Psychology',
+    'Sociology',
+    'Literature',
+    'Foreign Language',
+    'Philosophy',
   ];
 
   static const List<String> _degrees = [
-    'Bachelor of Science', 'Bachelor of Arts', 'Master of Science', 'Master of Arts',
-    'Doctor of Philosophy', 'MBA', 'JD', 'MD', 'Associate Degree', 'Certificate'
+    'Bachelor of Science',
+    'Bachelor of Arts',
+    'Master of Science',
+    'Master of Arts',
+    'Doctor of Philosophy',
+    'MBA',
+    'JD',
+    'MD',
+    'Associate Degree',
+    'Certificate',
   ];
 
   static const List<String> _majors = [
-    'Computer Science', 'Business Administration', 'Engineering', 'Psychology', 'Biology',
-    'English Literature', 'Mathematics', 'History', 'Chemistry', 'Physics', 'Economics',
-    'Political Science', 'Sociology', 'Art', 'Music', 'Education', 'Nursing'
+    'Computer Science',
+    'Business Administration',
+    'Engineering',
+    'Psychology',
+    'Biology',
+    'English Literature',
+    'Mathematics',
+    'History',
+    'Chemistry',
+    'Physics',
+    'Economics',
+    'Political Science',
+    'Sociology',
+    'Art',
+    'Music',
+    'Education',
+    'Nursing',
   ];
 
-  static const List<String> _grades = ['A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'F'];
+  static const List<String> _grades = [
+    'A',
+    'A-',
+    'B+',
+    'B',
+    'B-',
+    'C+',
+    'C',
+    'C-',
+    'D+',
+    'D',
+    'F',
+  ];
 
   static const List<String> _universities = [
-    'Harvard University', 'Stanford University', 'MIT', 'University of Cambridge',
-    'Oxford University', 'University of Chicago', 'Princeton University', 'Yale University',
-    'Columbia University', 'University of Pennsylvania', 'Caltech', 'Duke University'
+    'Harvard University',
+    'Stanford University',
+    'MIT',
+    'University of Cambridge',
+    'Oxford University',
+    'University of Chicago',
+    'Princeton University',
+    'Yale University',
+    'Columbia University',
+    'University of Pennsylvania',
+    'Caltech',
+    'Duke University',
   ];
 
   static String schoolName() {
-    final prefixes = ['Lincoln', 'Washington', 'Jefferson', 'Roosevelt', 'Kennedy', 'Eisenhower'];
+    final prefixes = [
+      'Lincoln',
+      'Washington',
+      'Jefferson',
+      'Roosevelt',
+      'Kennedy',
+      'Eisenhower',
+    ];
     final type = _schoolTypes[_random.nextInt(_schoolTypes.length)];
     return '${prefixes[_random.nextInt(prefixes.length)]} $type';
   }
@@ -64,13 +136,26 @@ class FakeEducation {
   }
 
   static String courseName() {
-    final prefixes = ['Introduction to', 'Advanced', 'Principles of', 'Topics in', 'Seminar on'];
+    final prefixes = [
+      'Introduction to',
+      'Advanced',
+      'Principles of',
+      'Topics in',
+      'Seminar on',
+    ];
     final subject = FakeEducation.subject();
     return '${prefixes[_random.nextInt(prefixes.length)]} $subject';
   }
 
   static String courseCode() {
-    final dept = ['CS', 'MATH', 'ENG', 'SCI', 'HIST', 'ART'][_random.nextInt(6)];
+    final dept = [
+      'CS',
+      'MATH',
+      'ENG',
+      'SCI',
+      'HIST',
+      'ART',
+    ][_random.nextInt(6)];
     final number = _random.nextInt(500) + 100;
     return '$dept${number.toString().padLeft(3, '0')}';
   }
@@ -81,15 +166,39 @@ class FakeEducation {
 
   static String professorName() {
     final titles = ['Dr.', 'Prof.', 'Dr.'];
-    final firstNames = ['James', 'Mary', 'John', 'Patricia', 'Robert', 'Jennifer'];
-    final lastNames = ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia'];
+    final firstNames = [
+      'James',
+      'Mary',
+      'John',
+      'Patricia',
+      'Robert',
+      'Jennifer',
+    ];
+    final lastNames = [
+      'Smith',
+      'Johnson',
+      'Williams',
+      'Brown',
+      'Jones',
+      'Garcia',
+    ];
     return '${titles[_random.nextInt(titles.length)]} ${firstNames[_random.nextInt(firstNames.length)]} ${lastNames[_random.nextInt(lastNames.length)]}';
   }
 
   static String department() {
     final depts = [
-      'Computer Science', 'Mathematics', 'English', 'Biology', 'Chemistry', 'Physics',
-      'History', 'Psychology', 'Business', 'Engineering', 'Art', 'Music'
+      'Computer Science',
+      'Mathematics',
+      'English',
+      'Biology',
+      'Chemistry',
+      'Physics',
+      'History',
+      'Psychology',
+      'Business',
+      'Engineering',
+      'Art',
+      'Music',
     ];
     return depts[_random.nextInt(depts.length)];
   }
@@ -112,15 +221,33 @@ class FakeEducation {
   }
 
   static String textbookTitle() {
-    final subjects = ['Programming', 'Mathematics', 'Literature', 'Science', 'History'];
-    final types = ['Fundamentals', 'Introduction', 'Advanced Topics', 'Principles', 'Applications'];
+    final subjects = [
+      'Programming',
+      'Mathematics',
+      'Literature',
+      'Science',
+      'History',
+    ];
+    final types = [
+      'Fundamentals',
+      'Introduction',
+      'Advanced Topics',
+      'Principles',
+      'Applications',
+    ];
     return '${types[_random.nextInt(types.length)]} of ${subjects[_random.nextInt(subjects.length)]}';
   }
 
   static String researchTopic() {
     final topics = [
-      'Machine Learning', 'Climate Change', 'Quantum Physics', 'Neuroscience',
-      'Economic Theory', 'Social Psychology', 'Genetic Engineering', 'Renewable Energy'
+      'Machine Learning',
+      'Climate Change',
+      'Quantum Physics',
+      'Neuroscience',
+      'Economic Theory',
+      'Social Psychology',
+      'Genetic Engineering',
+      'Renewable Energy',
     ];
     return topics[_random.nextInt(topics.length)];
   }

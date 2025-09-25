@@ -4,27 +4,61 @@ class FakeLegal {
   static final Random _random = Random();
 
   static const List<String> _contractTypes = [
-    'Service Agreement', 'Employment Contract', 'Lease Agreement', 'Sales Contract',
-    'Partnership Agreement', 'NDA', 'License Agreement', 'Vendor Agreement'
+    'Service Agreement',
+    'Employment Contract',
+    'Lease Agreement',
+    'Sales Contract',
+    'Partnership Agreement',
+    'NDA',
+    'License Agreement',
+    'Vendor Agreement',
   ];
 
   static const List<String> _courtTypes = [
-    'Supreme Court', 'Federal Court', 'State Court', 'County Court', 'Municipal Court'
+    'Supreme Court',
+    'Federal Court',
+    'State Court',
+    'County Court',
+    'Municipal Court',
   ];
 
   static const List<String> _caseTypes = [
-    'Civil Case', 'Criminal Case', 'Family Law', 'Contract Dispute', 'Personal Injury',
-    'Property Dispute', 'Employment Law', 'Tax Law'
+    'Civil Case',
+    'Criminal Case',
+    'Family Law',
+    'Contract Dispute',
+    'Personal Injury',
+    'Property Dispute',
+    'Employment Law',
+    'Tax Law',
   ];
 
   static const List<String> _lawyers = [
-    'John Smith', 'Sarah Johnson', 'Michael Williams', 'Jennifer Brown', 'David Davis',
-    'Lisa Miller', 'Robert Wilson', 'Patricia Moore', 'James Taylor', 'Linda Anderson'
+    'John Smith',
+    'Sarah Johnson',
+    'Michael Williams',
+    'Jennifer Brown',
+    'David Davis',
+    'Lisa Miller',
+    'Robert Wilson',
+    'Patricia Moore',
+    'James Taylor',
+    'Linda Anderson',
   ];
 
   static const List<String> _legalDocuments = [
-    'Contract', 'Will', 'Trust', 'Power of Attorney', 'Deed', 'Mortgage', 'Lease',
-    'Patent', 'Trademark', 'Copyright', 'License', 'Agreement'
+    'Contract',
+    'Will',
+    'Trust',
+    'Power of Attorney',
+    'Deed',
+    'Mortgage',
+    'Lease',
+    'Patent',
+    'Trademark',
+    'Copyright',
+    'License',
+    'Agreement',
   ];
 
   static String contractType() {
@@ -75,18 +109,29 @@ class FakeLegal {
   }
 
   static String legalPrecedent() {
-    final cases = ['Smith v. Jones', 'Johnson v. State', 'Williams v. Corporation', 'Brown v. City'];
+    final cases = [
+      'Smith v. Jones',
+      'Johnson v. State',
+      'Williams v. Corporation',
+      'Brown v. City',
+    ];
     return cases[_random.nextInt(cases.length)];
   }
 
   static String statute() {
-    final codes = ['Civil Code §', 'Penal Code §', 'Family Code §', 'Business Code §'];
+    final codes = [
+      'Civil Code §',
+      'Penal Code §',
+      'Family Code §',
+      'Business Code §',
+    ];
     final section = _random.nextInt(10000) + 1000;
     return '${codes[_random.nextInt(codes.length)]}$section';
   }
 
   static String courtDecision() {
-    return ['Granted', 'Denied', 'Dismissed', 'Remanded', 'Affirmed'][_random.nextInt(5)];
+    return ['Granted', 'Denied', 'Dismissed', 'Remanded', 'Affirmed'][_random
+        .nextInt(5)];
   }
 
   static int caseDuration() {
@@ -98,7 +143,12 @@ class FakeLegal {
   }
 
   static String confidentialityLevel() {
-    return ['Public', 'Confidential', 'Attorney-Client Privilege', 'Sealed'][_random.nextInt(4)];
+    return [
+      'Public',
+      'Confidential',
+      'Attorney-Client Privilege',
+      'Sealed',
+    ][_random.nextInt(4)];
   }
 
   static String arbitrationClause() {

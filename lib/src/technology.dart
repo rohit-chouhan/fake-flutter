@@ -4,36 +4,107 @@ class FakeTechnology {
   static final Random _random = Random();
 
   static const List<String> _programmingLanguages = [
-    'JavaScript', 'Python', 'Java', 'C#', 'C++', 'PHP', 'Ruby', 'Swift', 'Kotlin',
-    'Go', 'Rust', 'TypeScript', 'Dart', 'Scala', 'R', 'MATLAB'
+    'JavaScript',
+    'Python',
+    'Java',
+    'C#',
+    'C++',
+    'PHP',
+    'Ruby',
+    'Swift',
+    'Kotlin',
+    'Go',
+    'Rust',
+    'TypeScript',
+    'Dart',
+    'Scala',
+    'R',
+    'MATLAB',
   ];
 
   static const List<String> _frameworks = [
-    'React', 'Angular', 'Vue.js', 'Express.js', 'Django', 'Flask', 'Spring',
-    'ASP.NET', 'Laravel', 'Ruby on Rails', 'Flutter', 'React Native', 'Ionic'
+    'React',
+    'Angular',
+    'Vue.js',
+    'Express.js',
+    'Django',
+    'Flask',
+    'Spring',
+    'ASP.NET',
+    'Laravel',
+    'Ruby on Rails',
+    'Flutter',
+    'React Native',
+    'Ionic',
   ];
 
   static const List<String> _databases = [
-    'MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'SQLite', 'Oracle', 'SQL Server',
-    'Cassandra', 'Elasticsearch', 'Firebase', 'DynamoDB'
+    'MySQL',
+    'PostgreSQL',
+    'MongoDB',
+    'Redis',
+    'SQLite',
+    'Oracle',
+    'SQL Server',
+    'Cassandra',
+    'Elasticsearch',
+    'Firebase',
+    'DynamoDB',
   ];
 
   static const List<String> _operatingSystems = [
-    'Windows', 'macOS', 'Linux', 'Ubuntu', 'CentOS', 'Android', 'iOS', 'Chrome OS'
+    'Windows',
+    'macOS',
+    'Linux',
+    'Ubuntu',
+    'CentOS',
+    'Android',
+    'iOS',
+    'Chrome OS',
   ];
 
   static const List<String> _devices = [
-    'iPhone', 'Android Phone', 'iPad', 'Android Tablet', 'MacBook', 'Windows Laptop',
-    'Desktop PC', 'Chromebook', 'Smart TV', 'Smart Watch', 'Gaming Console'
+    'iPhone',
+    'Android Phone',
+    'iPad',
+    'Android Tablet',
+    'MacBook',
+    'Windows Laptop',
+    'Desktop PC',
+    'Chromebook',
+    'Smart TV',
+    'Smart Watch',
+    'Gaming Console',
   ];
 
   static const List<String> _browsers = [
-    'Chrome', 'Firefox', 'Safari', 'Edge', 'Opera', 'Brave', 'Vivaldi'
+    'Chrome',
+    'Firefox',
+    'Safari',
+    'Edge',
+    'Opera',
+    'Brave',
+    'Vivaldi',
   ];
 
   static const List<String> _fileFormats = [
-    'PDF', 'DOCX', 'XLSX', 'PPTX', 'TXT', 'CSV', 'JSON', 'XML', 'HTML', 'CSS',
-    'JPG', 'PNG', 'GIF', 'MP4', 'MP3', 'ZIP', 'RAR'
+    'PDF',
+    'DOCX',
+    'XLSX',
+    'PPTX',
+    'TXT',
+    'CSV',
+    'JSON',
+    'XML',
+    'HTML',
+    'CSS',
+    'JPG',
+    'PNG',
+    'GIF',
+    'MP4',
+    'MP3',
+    'ZIP',
+    'RAR',
   ];
 
   static String programmingLanguage() {
@@ -88,7 +159,16 @@ class FakeTechnology {
   }
 
   static String domainExtension() {
-    final extensions = ['.com', '.org', '.net', '.io', '.co', '.dev', '.app', '.tech'];
+    final extensions = [
+      '.com',
+      '.org',
+      '.net',
+      '.io',
+      '.co',
+      '.dev',
+      '.app',
+      '.tech',
+    ];
     return extensions[_random.nextInt(extensions.length)];
   }
 
@@ -98,12 +178,27 @@ class FakeTechnology {
   }
 
   static String httpMethod() {
-    final methods = ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'];
+    final methods = [
+      'GET',
+      'POST',
+      'PUT',
+      'DELETE',
+      'PATCH',
+      'HEAD',
+      'OPTIONS',
+    ];
     return methods[_random.nextInt(methods.length)];
   }
 
   static String apiEndpoint() {
-    final endpoints = ['/users', '/posts', '/comments', '/products', '/orders', '/auth/login'];
+    final endpoints = [
+      '/users',
+      '/posts',
+      '/comments',
+      '/products',
+      '/orders',
+      '/auth/login',
+    ];
     return endpoints[_random.nextInt(endpoints.length)];
   }
 
@@ -112,7 +207,15 @@ class FakeTechnology {
   }
 
   static String fileName() {
-    final names = ['document', 'report', 'presentation', 'spreadsheet', 'image', 'video', 'archive'];
+    final names = [
+      'document',
+      'report',
+      'presentation',
+      'spreadsheet',
+      'image',
+      'video',
+      'archive',
+    ];
     final name = names[_random.nextInt(names.length)];
     final number = _random.nextInt(1000);
     final ext = fileFormat();
@@ -126,13 +229,14 @@ class FakeTechnology {
   static String mimeType() {
     final types = {
       'PDF': 'application/pdf',
-      'DOCX': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+      'DOCX':
+          'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
       'JPG': 'image/jpeg',
       'PNG': 'image/png',
       'MP4': 'video/mp4',
       'MP3': 'audio/mpeg',
       'JSON': 'application/json',
-      'HTML': 'text/html'
+      'HTML': 'text/html',
     };
     final format = fileFormat();
     return types[format] ?? 'application/octet-stream';
@@ -148,7 +252,15 @@ class FakeTechnology {
   }
 
   static String dockerImage() {
-    final names = ['nginx', 'postgres', 'redis', 'node', 'python', 'ubuntu', 'alpine'];
+    final names = [
+      'nginx',
+      'postgres',
+      'redis',
+      'node',
+      'python',
+      'ubuntu',
+      'alpine',
+    ];
     final name = names[_random.nextInt(names.length)];
     final tag = versionNumber();
     return '$name:$tag';

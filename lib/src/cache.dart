@@ -8,7 +8,10 @@ class FakeCache {
   /// Get cached data or generate new if not cached
   static List<String> getCached(String key, List<String> generator, int size) {
     if (!_cache.containsKey(key)) {
-      _cache[key] = List.generate(size, (_) => generator[_random.nextInt(generator.length)]);
+      _cache[key] = List.generate(
+        size,
+        (_) => generator[_random.nextInt(generator.length)],
+      );
     }
     return _cache[key]!;
   }
@@ -31,8 +34,14 @@ class FakeCache {
 /// Optimized random number generation
 class FastRandom {
   static final Random _random = Random();
-  static final List<int> _ints = List.generate(1000, (_) => _random.nextInt(1000000));
-  static final List<double> _doubles = List.generate(1000, (_) => _random.nextDouble());
+  static final List<int> _ints = List.generate(
+    1000,
+    (_) => _random.nextInt(1000000),
+  );
+  static final List<double> _doubles = List.generate(
+    1000,
+    (_) => _random.nextDouble(),
+  );
   static int _intIndex = 0;
   static int _doubleIndex = 0;
 

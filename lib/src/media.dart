@@ -4,12 +4,37 @@ class FakeMedia {
   static final Random _random = Random();
 
   static const List<String> _emojis = [
-    '😀', '😂', '😊', '😍', '🤔', '😎', '😢', '😡', '👍', '👎',
-    '❤️', '🔥', '⭐', '🎉', '🚀', '💯', '🙌', '🤝', '👏', '🎶'
+    '😀',
+    '😂',
+    '😊',
+    '😍',
+    '🤔',
+    '😎',
+    '😢',
+    '😡',
+    '👍',
+    '👎',
+    '❤️',
+    '🔥',
+    '⭐',
+    '🎉',
+    '🚀',
+    '💯',
+    '🙌',
+    '🤝',
+    '👏',
+    '🎶',
   ];
 
   static const List<String> _backgroundColors = [
-    'red', 'blue', 'green', 'yellow', 'purple', 'orange', 'pink', 'gray'
+    'red',
+    'blue',
+    'green',
+    'yellow',
+    'purple',
+    'orange',
+    'pink',
+    'gray',
   ];
 
   static String avatarUrl({int size = 150}) {

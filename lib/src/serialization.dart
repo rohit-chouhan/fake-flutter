@@ -14,7 +14,10 @@ class FakeSerialization {
   }
 
   /// Export list of maps to CSV string
-  static String toCsv(List<Map<String, dynamic>> data, {List<String>? columns}) {
+  static String toCsv(
+    List<Map<String, dynamic>> data, {
+    List<String>? columns,
+  }) {
     if (data.isEmpty) return '';
 
     // Determine columns from first row if not provided
@@ -32,7 +35,9 @@ class FakeSerialization {
 
         // Escape commas and quotes in values
         final strValue = value.toString();
-        if (strValue.contains(',') || strValue.contains('"') || strValue.contains('\n')) {
+        if (strValue.contains(',') ||
+            strValue.contains('"') ||
+            strValue.contains('\n')) {
           return '"${strValue.replaceAll('"', '""')}"';
         }
         return strValue;
@@ -71,22 +76,27 @@ class FakeSerialization {
   }
 
   /// Export to SQL INSERT statements
-  static String toSqlInserts(String tableName, List<Map<String, dynamic>> data) {
+  static String toSqlInserts(
+    String tableName,
+    List<Map<String, dynamic>> data,
+  ) {
     if (data.isEmpty) return '';
 
     final columns = data.first.keys.join(', ');
     final buffer = StringBuffer();
 
     for (final row in data) {
-      final values = row.values.map((value) {
-        if (value is String) {
-          return "'${value.replaceAll("'", "''")}'";
-        } else if (value is DateTime) {
-          return "'${value.toIso8601String()}'";
-        } else {
-          return value.toString();
-        }
-      }).join(', ');
+      final values = row.values
+          .map((value) {
+            if (value is String) {
+              return "'${value.replaceAll("'", "''")}'";
+            } else if (value is DateTime) {
+              return "'${value.toIso8601String()}'";
+            } else {
+              return value.toString();
+            }
+          })
+          .join(', ');
 
       buffer.writeln('INSERT INTO $tableName ($columns) VALUES ($values);');
     }

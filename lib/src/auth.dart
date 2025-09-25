@@ -1,6 +1,10 @@
 import 'dart:math';
 import 'dart:convert';
 
+/// A utility class for generating fake authentication and security-related data.
+///
+/// This class provides static methods to generate passwords, tokens, security questions,
+/// and other authentication elements for testing and prototyping.
 class FakeAuth {
   static final Random _random = Random();
 
@@ -12,11 +16,24 @@ class FakeAuth {
     'What is your favorite movie?',
     'What was your first car?',
     'What is your favorite food?',
-    'What is the name of your elementary school?'
+    'What is the name of your elementary school?',
   ];
 
-  static const List<String> _specialChars = ['!', '@', '#', r'$', '%', '^', '&', '*'];
+  static const List<String> _specialChars = [
+    '!',
+    '@',
+    '#',
+    r'$',
+    '%',
+    '^',
+    '&',
+    '*',
+  ];
 
+  /// Generates a random password.
+  ///
+  /// [length] The length of the password (default 8).
+  /// Returns a string with at least one uppercase, lowercase, number, and special character.
   static String password({int length = 8}) {
     final buffer = StringBuffer();
     // Ensure at least one uppercase, lowercase, number, special
@@ -46,44 +63,84 @@ class FakeAuth {
     return buffer.toString();
   }
 
+  /// Generates a fake JWT token.
+  ///
+  /// Returns a base64url encoded JWT with fake header, payload, and signature.
   static String jwtToken() {
     // Fake JWT structure: header.payload.signature
     final header = base64Url.encode(utf8.encode('{"alg":"HS256","typ":"JWT"}'));
-    final payload = base64Url.encode(utf8.encode('{"sub":"${_random.nextInt(1000000)}","iat":${DateTime.now().millisecondsSinceEpoch ~/ 1000},"exp":${(DateTime.now().add(Duration(hours: 1)).millisecondsSinceEpoch ~/ 1000)}}'));
+    final payload = base64Url.encode(
+      utf8.encode(
+        '{"sub":"${_random.nextInt(1000000)}","iat":${DateTime.now().millisecondsSinceEpoch ~/ 1000},"exp":${(DateTime.now().add(Duration(hours: 1)).millisecondsSinceEpoch ~/ 1000)}}',
+      ),
+    );
     final signature = _randomHex(43); // Fake signature
     return '$header.$payload.$signature';
   }
 
+  /// Generates a fake OAuth token.
+  ///
+  /// Returns a random hexadecimal string.
   static String oauthToken() {
     return _randomHex(32);
   }
 
+  /// Generates a fake API key.
+  ///
+  /// Returns a random hexadecimal string.
   static String apiKey() {
     return _randomHex(32);
   }
 
+  /// Generates a fake access token.
+  ///
+  /// Returns a Bearer token with random hex.
   static String accessToken() {
     return 'Bearer ${_randomHex(32)}';
   }
 
+  /// Generates a fake refresh token.
+  ///
+  /// Returns a longer random hexadecimal string.
   static String refreshToken() {
     return _randomHex(64);
   }
 
+  /// Generates a random security question.
+  ///
+  /// Returns one of the predefined security questions.
   static String securityQuestion() {
     return _securityQuestions[_random.nextInt(_securityQuestions.length)];
   }
 
+  /// Generates a random security answer.
+  ///
+  /// Returns one of the predefined answers.
   static String securityAnswer() {
     // Simple fake answers
-    final answers = ['Smith', 'Fluffy', 'Blue', 'New York', 'Star Wars', 'Toyota', 'Pizza', 'Lincoln Elementary'];
+    final answers = [
+      'Smith',
+      'Fluffy',
+      'Blue',
+      'New York',
+      'Star Wars',
+      'Toyota',
+      'Pizza',
+      'Lincoln Elementary',
+    ];
     return answers[_random.nextInt(answers.length)];
   }
 
+  /// Generates a fake session ID.
+  ///
+  /// Returns a random hexadecimal string.
   static String sessionId() {
     return _randomHex(32);
   }
 
+  /// Generates a fake CSRF token.
+  ///
+  /// Returns a random hexadecimal string.
   static String csrfToken() {
     return _randomHex(32);
   }

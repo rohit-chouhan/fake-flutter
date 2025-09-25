@@ -4,29 +4,73 @@ class FakeBusiness {
   static final Random _random = Random();
 
   static const List<String> _productCategories = [
-    'Electronics', 'Clothing', 'Books', 'Home & Garden', 'Sports', 'Beauty',
-    'Automotive', 'Toys', 'Food', 'Health', 'Office Supplies', 'Pet Supplies'
+    'Electronics',
+    'Clothing',
+    'Books',
+    'Home & Garden',
+    'Sports',
+    'Beauty',
+    'Automotive',
+    'Toys',
+    'Food',
+    'Health',
+    'Office Supplies',
+    'Pet Supplies',
   ];
 
   static const List<String> _productNames = [
-    'Wireless Headphones', 'Smart Watch', 'Laptop', 'Tablet', 'Smartphone',
-    'Running Shoes', 'Coffee Maker', 'Blender', 'Bookshelf', 'Office Chair',
-    'Yoga Mat', 'Dumbbells', 'Skincare Cream', 'Perfume', 'Board Game'
+    'Wireless Headphones',
+    'Smart Watch',
+    'Laptop',
+    'Tablet',
+    'Smartphone',
+    'Running Shoes',
+    'Coffee Maker',
+    'Blender',
+    'Bookshelf',
+    'Office Chair',
+    'Yoga Mat',
+    'Dumbbells',
+    'Skincare Cream',
+    'Perfume',
+    'Board Game',
   ];
 
   static const List<String> _companies = [
-    'TechCorp', 'Global Solutions', 'Innovate Inc', 'Prime Industries', 'NextGen',
-    'Future Systems', 'Advanced Technologies', 'Smart Solutions', 'Digital Dynamics'
+    'TechCorp',
+    'Global Solutions',
+    'Innovate Inc',
+    'Prime Industries',
+    'NextGen',
+    'Future Systems',
+    'Advanced Technologies',
+    'Smart Solutions',
+    'Digital Dynamics',
   ];
 
   static const List<String> _departments = [
-    'Sales', 'Marketing', 'Engineering', 'Human Resources', 'Finance', 'Operations',
-    'Customer Service', 'Research & Development', 'Quality Assurance', 'Legal'
+    'Sales',
+    'Marketing',
+    'Engineering',
+    'Human Resources',
+    'Finance',
+    'Operations',
+    'Customer Service',
+    'Research & Development',
+    'Quality Assurance',
+    'Legal',
   ];
 
   static const List<String> _jobTitles = [
-    'Software Engineer', 'Product Manager', 'Data Analyst', 'Designer', 'Consultant',
-    'Account Manager', 'Project Manager', 'Business Analyst', 'Marketing Specialist'
+    'Software Engineer',
+    'Product Manager',
+    'Data Analyst',
+    'Designer',
+    'Consultant',
+    'Account Manager',
+    'Project Manager',
+    'Business Analyst',
+    'Marketing Specialist',
   ];
 
   static String productCategory() {
@@ -109,35 +153,83 @@ class FakeBusiness {
   }
 
   static String paymentMethod() {
-    return ['Credit Card', 'Debit Card', 'PayPal', 'Bank Transfer', 'Cash', 'Check'][_random.nextInt(6)];
+    return [
+      'Credit Card',
+      'Debit Card',
+      'PayPal',
+      'Bank Transfer',
+      'Cash',
+      'Check',
+    ][_random.nextInt(6)];
   }
 
   static String shippingMethod() {
-    return ['Standard Shipping', 'Express Shipping', 'Overnight', 'Two-Day', 'Free Shipping'][_random.nextInt(5)];
+    return [
+      'Standard Shipping',
+      'Express Shipping',
+      'Overnight',
+      'Two-Day',
+      'Free Shipping',
+    ][_random.nextInt(5)];
   }
 
   static int orderStatus() {
-    return ['Pending', 'Processing', 'Shipped', 'Delivered', 'Cancelled'][_random.nextInt(5)] as int? ?? 0;
+    return [
+              'Pending',
+              'Processing',
+              'Shipped',
+              'Delivered',
+              'Cancelled',
+            ][_random.nextInt(5)]
+            as int? ??
+        0;
   }
 
   static String returnReason() {
-    return ['Defective', 'Wrong Item', 'Not as Described', 'Changed Mind', 'Late Delivery'][_random.nextInt(5)];
+    return [
+      'Defective',
+      'Wrong Item',
+      'Not as Described',
+      'Changed Mind',
+      'Late Delivery',
+    ][_random.nextInt(5)];
   }
 
   static String warrantyPeriod() {
-    return ['1 Year', '2 Years', '3 Years', '5 Years', 'Lifetime'][_random.nextInt(5)];
+    return ['1 Year', '2 Years', '3 Years', '5 Years', 'Lifetime'][_random
+        .nextInt(5)];
   }
 
   static String contractType() {
-    return ['Service Agreement', 'License Agreement', 'NDA', 'Partnership Agreement', 'Employment Contract'][_random.nextInt(5)];
+    return [
+      'Service Agreement',
+      'License Agreement',
+      'NDA',
+      'Partnership Agreement',
+      'Employment Contract',
+    ][_random.nextInt(5)];
   }
 
   static String businessType() {
-    return ['Corporation', 'LLC', 'Partnership', 'Sole Proprietorship', 'Non-Profit'][_random.nextInt(5)];
+    return [
+      'Corporation',
+      'LLC',
+      'Partnership',
+      'Sole Proprietorship',
+      'Non-Profit',
+    ][_random.nextInt(5)];
   }
 
   static String industry() {
-    return ['Technology', 'Healthcare', 'Finance', 'Retail', 'Manufacturing', 'Education', 'Entertainment'][_random.nextInt(7)];
+    return [
+      'Technology',
+      'Healthcare',
+      'Finance',
+      'Retail',
+      'Manufacturing',
+      'Education',
+      'Entertainment',
+    ][_random.nextInt(7)];
   }
 
   static int employeeCount() {

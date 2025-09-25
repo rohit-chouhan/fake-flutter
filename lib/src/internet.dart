@@ -4,21 +4,32 @@ class FakeInternet {
   static final Random _random = Random();
 
   static const List<String> _domains = [
-    'example.com', 'test.org', 'fake.net', 'demo.io'
+    'example.com',
+    'test.org',
+    'fake.net',
+    'demo.io',
   ];
 
   static const List<String> _userAgents = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36',
-    'Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Mobile/15E148 Safari/604.1'
+    'Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Mobile/15E148 Safari/604.1',
   ];
 
   static const List<String> _fileExtensions = [
-    '.txt', '.jpg', '.pdf', '.docx', '.mp4'
+    '.txt',
+    '.jpg',
+    '.pdf',
+    '.docx',
+    '.mp4',
   ];
 
   static const List<String> _socialPlatforms = [
-    'twitter', 'facebook', 'instagram', 'linkedin', 'github'
+    'twitter',
+    'facebook',
+    'instagram',
+    'linkedin',
+    'github',
   ];
 
   static String ipAddress() {
@@ -58,15 +69,17 @@ class FakeInternet {
   static Map<String, String> httpHeaders() {
     return {
       'User-Agent': userAgent(),
-      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+      'Accept':
+          'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
       'Accept-Language': 'en-US,en;q=0.5',
       'Accept-Encoding': 'gzip, deflate',
-      'Connection': 'keep-alive'
+      'Connection': 'keep-alive',
     };
   }
 
   static String apiToken() {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const chars =
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     final token = StringBuffer();
     for (var i = 0; i < 32; i++) {
       token.write(chars[_random.nextInt(chars.length)]);
@@ -75,7 +88,8 @@ class FakeInternet {
   }
 
   static String apiKey() {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const chars =
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     final key = StringBuffer();
     for (var i = 0; i < 40; i++) {
       key.write(chars[_random.nextInt(chars.length)]);
@@ -84,7 +98,8 @@ class FakeInternet {
   }
 
   static String socialMediaProfileUrl({String? platform}) {
-    final plat = platform ?? _socialPlatforms[_random.nextInt(_socialPlatforms.length)];
+    final plat =
+        platform ?? _socialPlatforms[_random.nextInt(_socialPlatforms.length)];
     final username = 'user${_random.nextInt(10000)}';
     return 'https://www.$plat.com/$username';
   }
@@ -95,7 +110,7 @@ class FakeInternet {
       'Check out this new recipe I tried 🍝',
       'Beautiful sunset today 🌅',
       'Working on something exciting! 🚀',
-      'Coffee and coding ☕💻'
+      'Coffee and coding ☕💻',
     ];
     return posts[_random.nextInt(posts.length)];
   }
@@ -109,12 +124,27 @@ class FakeInternet {
   }
 
   static String hashtag() {
-    final tags = ['#love', '#instagood', '#photooftheday', '#beautiful', '#happy', '#cute', '#tbt', '#instadaily'];
+    final tags = [
+      '#love',
+      '#instagood',
+      '#photooftheday',
+      '#beautiful',
+      '#happy',
+      '#cute',
+      '#tbt',
+      '#instadaily',
+    ];
     return tags[_random.nextInt(tags.length)];
   }
 
   static String trendingTopic() {
-    final topics = ['#BreakingNews', '#Trending', '#Viral', '#HotTopic', '#Discussion'];
+    final topics = [
+      '#BreakingNews',
+      '#Trending',
+      '#Viral',
+      '#HotTopic',
+      '#Discussion',
+    ];
     return topics[_random.nextInt(topics.length)];
   }
 
@@ -129,7 +159,16 @@ class FakeInternet {
   }
 
   static String domainName() {
-    final words = ['tech', 'web', 'online', 'digital', 'global', 'net', 'hub', 'zone'];
+    final words = [
+      'tech',
+      'web',
+      'online',
+      'digital',
+      'global',
+      'net',
+      'hub',
+      'zone',
+    ];
     final tlds = ['.com', '.org', '.net', '.io', '.co'];
     return '${words[_random.nextInt(words.length)]}${_random.nextInt(100)}${tlds[_random.nextInt(tlds.length)]}';
   }
