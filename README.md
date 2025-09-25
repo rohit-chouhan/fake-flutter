@@ -257,4 +257,4 @@ You are welcome to open a _[ticket](https://github.com/rohit-chouhan/fake-flutte
 
 # Copyright and License
 
-> Copyright © 2022 **[Rohit Chouhan](https://rohitchouhan.com)**. Licensed under the _[MIT LICENSE](https://github.com/rohit-chouhan/fake-flutter/blob/main/LICENSE)_.
+> Copyright © 2025 **[Rohit Chouhan](https://rohitchouhan.com)**. Licensed under the _[MIT LICENSE](https://github.com/rohit-chouhan/fake-flutter/blob/main/LICENSE)_.
