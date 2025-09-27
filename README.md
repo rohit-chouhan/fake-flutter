@@ -4,9 +4,9 @@ A Flutter package for generating fake data for testing, prototyping, and seeding
 ![Pub Likes](https://img.shields.io/pub/likes/fake)
 ![Pub Points](https://img.shields.io/pub/points/fake)
 ![Pub Monthly Downloads](https://img.shields.io/pub/dm/fake)
-![GitHub Issues](https://img.shields.io/github/issues/rohit-chouhan/fake)
-![GitHub PRs](https://img.shields.io/github/issues-pr/rohit-chouhan/fake)
-![GitHub Forks](https://img.shields.io/github/forks/rohit-chouhan/fake)
+![GitHub Issues](https://img.shields.io/github/issues/rohit-chouhan/fake-flutter)
+![GitHub PRs](https://img.shields.io/github/issues-pr/rohit-chouhan/fakefake-flutter)
+![GitHub Forks](https://img.shields.io/github/forks/rohit-chouhan/fakefake-flutter)
 
 ## Features
 
