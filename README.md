@@ -1,12 +1,12 @@
 A Flutter package for generating fake data for testing, prototyping, and seeding databases. This package provides easy-to-use static functions to generate realistic fake data across various categories.
 
 
-![Pub Likes](https://img.shields.io/pub/likes/fake-flutter)
-![Pub Points](https://img.shields.io/pub/points/fake-flutter)
-![Pub Monthly Downloads](https://img.shields.io/pub/dm/fake-flutter)
-![GitHub Issues](https://img.shields.io/github/issues/rohit-chouhan/fake-flutter)
-![GitHub PRs](https://img.shields.io/github/issues-pr/rohit-chouhan/fake-flutter)
-![GitHub Forks](https://img.shields.io/github/forks/rohit-chouhan/fake-flutter)
+![Pub Likes](https://img.shields.io/pub/likes/fake)
+![Pub Points](https://img.shields.io/pub/points/fake)
+![Pub Monthly Downloads](https://img.shields.io/pub/dm/fake)
+![GitHub Issues](https://img.shields.io/github/issues/rohit-chouhan/fake)
+![GitHub PRs](https://img.shields.io/github/issues-pr/rohit-chouhan/fake)
+![GitHub Forks](https://img.shields.io/github/forks/rohit-chouhan/fake)
 
 ## Features
 
@@ -249,7 +249,7 @@ For issues, feature requests, or contributions, please visit the GitHub reposito
 
 # Contributors
 
-Have you found a bug or have a suggestion of how to enhance fake-flutter Package? Open an issue or pull request and we will take a look at it as soon as possible.
+Have you found a bug or have a suggestion of how to enhance fake Package? Open an issue or pull request and we will take a look at it as soon as possible.
 
 # Report bugs or issues
 

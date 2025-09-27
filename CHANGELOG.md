@@ -1,3 +1,7 @@
+## 0.0.3
+
+* Bugs fixed
+
 ## 0.0.2
 
 * Added comprehensive documentation to public API elements to meet 20% coverage requirement

@@ -1,6 +1,6 @@
 name: fake
 description: "A Flutter package for generating fake data for testing, prototyping, and seeding databases."
-version: 0.0.2
+version: 0.0.3
 homepage: https://rohitchouhan.com
 repository: https://github.com/rohit-chouhan/fake-flutter
 
@@ -55,6 +55,9 @@ flutter:
   # For details regarding fonts in packages, see
   # https://flutter.dev/to/font-from-package
 
+screenshots:
+  - description: "Fake Data Flutter"
+    path: logo.webp
 
 topics:
   - faker
