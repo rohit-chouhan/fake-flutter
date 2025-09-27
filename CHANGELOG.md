@@ -1,3 +1,7 @@
+## 1.0.0
+
+* final released
+
 ## 0.0.3
 
 * Bugs fixed
