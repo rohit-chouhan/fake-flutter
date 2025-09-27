@@ -2,6 +2,10 @@
 
 * final released
 
+## 0.0.4
+
+* Bugs fixed
+
 ## 0.0.3
 
 * Bugs fixed
